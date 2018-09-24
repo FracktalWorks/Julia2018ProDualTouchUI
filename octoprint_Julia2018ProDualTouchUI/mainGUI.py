@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\NewUI.ui'
+# Form implementation generated from reading ui file 'NewUI.ui'
 #
 # Created by: PyQt4 UI code generator 4.11.4
 #
@@ -931,13 +931,13 @@ class Ui_MainWindow(object):
         self.settingsBackButton.setFlat(False)
         self.settingsBackButton.setObjectName(_fromUtf8("settingsBackButton"))
         self.verticalLayout.addWidget(self.settingsBackButton)
-        self.networkInfoButton = QtGui.QPushButton(self.scrollAreaWidgetContents)
-        self.networkInfoButton.setMinimumSize(QtCore.QSize(0, 70))
+        self.networkSettingsButton = QtGui.QPushButton(self.scrollAreaWidgetContents)
+        self.networkSettingsButton.setMinimumSize(QtCore.QSize(0, 70))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(13)
-        self.networkInfoButton.setFont(font)
-        self.networkInfoButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.networkSettingsButton.setFont(font)
+        self.networkSettingsButton.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "\n"
@@ -960,16 +960,16 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.networkInfoButton.setIconSize(QtCore.QSize(40, 40))
-        self.networkInfoButton.setObjectName(_fromUtf8("networkInfoButton"))
-        self.verticalLayout.addWidget(self.networkInfoButton)
-        self.configureWifiButton = QtGui.QPushButton(self.scrollAreaWidgetContents)
-        self.configureWifiButton.setMinimumSize(QtCore.QSize(0, 70))
+        self.networkSettingsButton.setIconSize(QtCore.QSize(40, 40))
+        self.networkSettingsButton.setObjectName(_fromUtf8("networkSettingsButton"))
+        self.verticalLayout.addWidget(self.networkSettingsButton)
+        self.displaySettingsButton = QtGui.QPushButton(self.scrollAreaWidgetContents)
+        self.displaySettingsButton.setMinimumSize(QtCore.QSize(0, 70))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(13)
-        self.configureWifiButton.setFont(font)
-        self.configureWifiButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.displaySettingsButton.setFont(font)
+        self.displaySettingsButton.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "\n"
@@ -992,9 +992,9 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.configureWifiButton.setIconSize(QtCore.QSize(40, 40))
-        self.configureWifiButton.setObjectName(_fromUtf8("configureWifiButton"))
-        self.verticalLayout.addWidget(self.configureWifiButton)
+        self.displaySettingsButton.setIconSize(QtCore.QSize(40, 40))
+        self.displaySettingsButton.setObjectName(_fromUtf8("displaySettingsButton"))
+        self.verticalLayout.addWidget(self.displaySettingsButton)
         self.pairPhoneButton = QtGui.QPushButton(self.scrollAreaWidgetContents)
         self.pairPhoneButton.setMinimumSize(QtCore.QSize(0, 70))
         font = QtGui.QFont()
@@ -1532,6 +1532,611 @@ class Ui_MainWindow(object):
         self.wifiSettingsDoneButton.raise_()
         self.hiddenCheckBox.raise_()
         self.stackedWidget.addWidget(self.wifiSettingsPage)
+        self.ethSettingsPage = QtGui.QWidget()
+        self.ethSettingsPage.setObjectName(_fromUtf8("ethSettingsPage"))
+        self.ethSettingsDoneButton = QtGui.QPushButton(self.ethSettingsPage)
+        self.ethSettingsDoneButton.setGeometry(QtCore.QRect(0, 230, 251, 91))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.ethSettingsDoneButton.setFont(font)
+        self.ethSettingsDoneButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.ethSettingsDoneButton.setIconSize(QtCore.QSize(40, 40))
+        self.ethSettingsDoneButton.setObjectName(_fromUtf8("ethSettingsDoneButton"))
+        self.ethSettingsCancelButton = QtGui.QPushButton(self.ethSettingsPage)
+        self.ethSettingsCancelButton.setGeometry(QtCore.QRect(250, 230, 231, 91))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.ethSettingsCancelButton.setFont(font)
+        self.ethSettingsCancelButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.ethSettingsCancelButton.setIconSize(QtCore.QSize(40, 40))
+        self.ethSettingsCancelButton.setObjectName(_fromUtf8("ethSettingsCancelButton"))
+        self.ethStaticCheckBox = QtGui.QCheckBox(self.ethSettingsPage)
+        self.ethStaticCheckBox.setGeometry(QtCore.QRect(10, 20, 161, 41))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(14)
+        self.ethStaticCheckBox.setFont(font)
+        self.ethStaticCheckBox.setStyleSheet(_fromUtf8("QCheckBox {\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator {\n"
+"    width: 25px;\n"
+"    height: 25px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    image: url(./templates/img/check-box.png);\n"
+"}\n"
+"QCheckBox::indicator:unchecked {\n"
+"    image: url(./templates/img/blank-check-box.png);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+""))
+        self.ethStaticCheckBox.setIconSize(QtCore.QSize(40, 40))
+        self.ethStaticCheckBox.setChecked(False)
+        self.ethStaticCheckBox.setObjectName(_fromUtf8("ethStaticCheckBox"))
+        self.ethStaticSettings = QtGui.QWidget(self.ethSettingsPage)
+        self.ethStaticSettings.setEnabled(True)
+        self.ethStaticSettings.setGeometry(QtCore.QRect(0, 70, 481, 151))
+        self.ethStaticSettings.setObjectName(_fromUtf8("ethStaticSettings"))
+        self.ethStaticIpLabel = QtGui.QLabel(self.ethStaticSettings)
+        self.ethStaticIpLabel.setGeometry(QtCore.QRect(10, 10, 110, 30))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("MS Shell Dlg 2"))
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.ethStaticIpLabel.setFont(font)
+        self.ethStaticIpLabel.setStyleSheet(_fromUtf8("color: rgb(255, 255, 255);"))
+        self.ethStaticIpLabel.setObjectName(_fromUtf8("ethStaticIpLabel"))
+        self.ethStaticGatewayLabel = QtGui.QLabel(self.ethStaticSettings)
+        self.ethStaticGatewayLabel.setGeometry(QtCore.QRect(10, 60, 110, 30))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("MS Shell Dlg 2"))
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.ethStaticGatewayLabel.setFont(font)
+        self.ethStaticGatewayLabel.setStyleSheet(_fromUtf8("color: rgb(255, 255, 255);"))
+        self.ethStaticGatewayLabel.setObjectName(_fromUtf8("ethStaticGatewayLabel"))
+        self.ethStaticGatewayKeyboardButton = QtGui.QPushButton(self.ethStaticSettings)
+        self.ethStaticGatewayKeyboardButton.setGeometry(QtCore.QRect(420, 60, 60, 30))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("MS Shell Dlg 2"))
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ethStaticGatewayKeyboardButton.setFont(font)
+        self.ethStaticGatewayKeyboardButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(0, 0, 0);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.ethStaticGatewayKeyboardButton.setIconSize(QtCore.QSize(40, 40))
+        self.ethStaticGatewayKeyboardButton.setObjectName(_fromUtf8("ethStaticGatewayKeyboardButton"))
+        self.ethStaticIpKeyboardButton = QtGui.QPushButton(self.ethStaticSettings)
+        self.ethStaticIpKeyboardButton.setEnabled(True)
+        self.ethStaticIpKeyboardButton.setGeometry(QtCore.QRect(420, 10, 60, 30))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("MS Shell Dlg 2"))
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ethStaticIpKeyboardButton.setFont(font)
+        self.ethStaticIpKeyboardButton.setAutoFillBackground(False)
+        self.ethStaticIpKeyboardButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(0, 0, 0);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.ethStaticIpKeyboardButton.setIconSize(QtCore.QSize(40, 40))
+        self.ethStaticIpKeyboardButton.setObjectName(_fromUtf8("ethStaticIpKeyboardButton"))
+        self.stackedWidget.addWidget(self.ethSettingsPage)
+        self.networkSettingsPage = QtGui.QWidget()
+        self.networkSettingsPage.setObjectName(_fromUtf8("networkSettingsPage"))
+        self.networkInfoButton = QtGui.QPushButton(self.networkSettingsPage)
+        self.networkInfoButton.setGeometry(QtCore.QRect(0, 0, 480, 70))
+        self.networkInfoButton.setMinimumSize(QtCore.QSize(0, 70))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.networkInfoButton.setFont(font)
+        self.networkInfoButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.networkInfoButton.setIconSize(QtCore.QSize(40, 40))
+        self.networkInfoButton.setObjectName(_fromUtf8("networkInfoButton"))
+        self.configureWifiButton = QtGui.QPushButton(self.networkSettingsPage)
+        self.configureWifiButton.setGeometry(QtCore.QRect(0, 70, 480, 70))
+        self.configureWifiButton.setMinimumSize(QtCore.QSize(0, 70))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.configureWifiButton.setFont(font)
+        self.configureWifiButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.configureWifiButton.setIconSize(QtCore.QSize(40, 40))
+        self.configureWifiButton.setObjectName(_fromUtf8("configureWifiButton"))
+        self.configureEthButton = QtGui.QPushButton(self.networkSettingsPage)
+        self.configureEthButton.setGeometry(QtCore.QRect(0, 140, 480, 70))
+        self.configureEthButton.setMinimumSize(QtCore.QSize(0, 70))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.configureEthButton.setFont(font)
+        self.configureEthButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.configureEthButton.setIconSize(QtCore.QSize(40, 40))
+        self.configureEthButton.setObjectName(_fromUtf8("configureEthButton"))
+        self.networkSettingsBackButton = QtGui.QPushButton(self.networkSettingsPage)
+        self.networkSettingsBackButton.setGeometry(QtCore.QRect(0, 250, 481, 71))
+        self.networkSettingsBackButton.setMinimumSize(QtCore.QSize(0, 0))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Light"))
+        font.setPointSize(9)
+        self.networkSettingsBackButton.setFont(font)
+        self.networkSettingsBackButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}"))
+        self.networkSettingsBackButton.setText(_fromUtf8(""))
+        self.networkSettingsBackButton.setIcon(icon4)
+        self.networkSettingsBackButton.setIconSize(QtCore.QSize(50, 50))
+        self.networkSettingsBackButton.setCheckable(False)
+        self.networkSettingsBackButton.setAutoDefault(False)
+        self.networkSettingsBackButton.setDefault(False)
+        self.networkSettingsBackButton.setFlat(False)
+        self.networkSettingsBackButton.setObjectName(_fromUtf8("networkSettingsBackButton"))
+        self.stackedWidget.addWidget(self.networkSettingsPage)
+        self.displaySettingsPage = QtGui.QWidget()
+        self.displaySettingsPage.setObjectName(_fromUtf8("displaySettingsPage"))
+        self.displaySettingsBackButton = QtGui.QPushButton(self.displaySettingsPage)
+        self.displaySettingsBackButton.setGeometry(QtCore.QRect(0, 250, 481, 71))
+        self.displaySettingsBackButton.setMinimumSize(QtCore.QSize(0, 0))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Light"))
+        font.setPointSize(9)
+        self.displaySettingsBackButton.setFont(font)
+        self.displaySettingsBackButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}"))
+        self.displaySettingsBackButton.setText(_fromUtf8(""))
+        self.displaySettingsBackButton.setIcon(icon4)
+        self.displaySettingsBackButton.setIconSize(QtCore.QSize(50, 50))
+        self.displaySettingsBackButton.setCheckable(False)
+        self.displaySettingsBackButton.setAutoDefault(False)
+        self.displaySettingsBackButton.setDefault(False)
+        self.displaySettingsBackButton.setFlat(False)
+        self.displaySettingsBackButton.setObjectName(_fromUtf8("displaySettingsBackButton"))
+        self.calibrateTouch = QtGui.QPushButton(self.displaySettingsPage)
+        self.calibrateTouch.setGeometry(QtCore.QRect(0, 70, 480, 70))
+        self.calibrateTouch.setMinimumSize(QtCore.QSize(0, 70))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.calibrateTouch.setFont(font)
+        self.calibrateTouch.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.calibrateTouch.setIconSize(QtCore.QSize(40, 40))
+        self.calibrateTouch.setObjectName(_fromUtf8("calibrateTouch"))
+        self.rotateDisplay = QtGui.QPushButton(self.displaySettingsPage)
+        self.rotateDisplay.setGeometry(QtCore.QRect(0, 0, 480, 70))
+        self.rotateDisplay.setMinimumSize(QtCore.QSize(0, 70))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.rotateDisplay.setFont(font)
+        self.rotateDisplay.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.rotateDisplay.setIconSize(QtCore.QSize(40, 40))
+        self.rotateDisplay.setObjectName(_fromUtf8("rotateDisplay"))
+        self.stackedWidget.addWidget(self.displaySettingsPage)
+        self.rotateDisplaySettingsPage = QtGui.QWidget()
+        self.rotateDisplaySettingsPage.setObjectName(_fromUtf8("rotateDisplaySettingsPage"))
+        self.rotateDisplaySettingsDoneButton = QtGui.QPushButton(self.rotateDisplaySettingsPage)
+        self.rotateDisplaySettingsDoneButton.setGeometry(QtCore.QRect(0, 230, 251, 91))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.rotateDisplaySettingsDoneButton.setFont(font)
+        self.rotateDisplaySettingsDoneButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.rotateDisplaySettingsDoneButton.setIconSize(QtCore.QSize(40, 40))
+        self.rotateDisplaySettingsDoneButton.setObjectName(_fromUtf8("rotateDisplaySettingsDoneButton"))
+        self.rotateDisplaySettingsCancelButton = QtGui.QPushButton(self.rotateDisplaySettingsPage)
+        self.rotateDisplaySettingsCancelButton.setGeometry(QtCore.QRect(250, 230, 231, 91))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(13)
+        self.rotateDisplaySettingsCancelButton.setFont(font)
+        self.rotateDisplaySettingsCancelButton.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.rotateDisplaySettingsCancelButton.setIconSize(QtCore.QSize(40, 40))
+        self.rotateDisplaySettingsCancelButton.setObjectName(_fromUtf8("rotateDisplaySettingsCancelButton"))
+        self.rotateDisplaySettingsComboBox = QtGui.QComboBox(self.rotateDisplaySettingsPage)
+        self.rotateDisplaySettingsComboBox.setGeometry(QtCore.QRect(10, 50, 461, 51))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(20)
+        self.rotateDisplaySettingsComboBox.setFont(font)
+        self.rotateDisplaySettingsComboBox.setStyleSheet(_fromUtf8(" QScrollBar:vertical {\n"
+"     border: 1px solid black;\n"
+"border-radius: 5px;\n"
+"    background-color: rgb(40,40,40);\n"
+"     width: 60px;\n"
+"     margin: 67px 0 67px 0;\n"
+" }\n"
+"\n"
+"/* Sets up the color and height of handle */\n"
+"QScrollBar::handle:vertical {\n"
+"border-radius: 5px;\n"
+"background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"min-height: 7px;\n"
+"}\n"
+"\n"
+"\n"
+"QScrollBar::add-line:vertical {\n"
+"     border: 1px solid black;\n"
+"background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"     height:65px;\n"
+"border-radius: 5px;\n"
+"     subcontrol-position: bottom;\n"
+"     subcontrol-origin: margin;\n"
+" }\n"
+"\n"
+" QScrollBar::sub-line:vertical {\n"
+"     border: 1px solid black;\n"
+"background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"     height: 65px;\n"
+"border-radius: 5px;\n"
+"     subcontrol-position: top;\n"
+"     subcontrol-origin: margin;\n"
+" }\n"
+"\n"
+"QScrollBar::up-arrow:vertical {\n"
+" image: url(./templates/img/arrows.png);\n"
+"    width: 40px;\n"
+"    height: 40px;\n"
+" padding: 5px;\n"
+" }\n"
+"QScrollBar::down-arrow:vertical {\n"
+" image: url(./templates/img/arrows-5.png);\n"
+"    width: 40px;\n"
+"    height: 40px;\n"
+" padding: 5px;\n"
+" }\n"
+"\n"
+"/* need this to get rid of crosshatching on scrollbar background */\n"
+"QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {\n"
+"background: none;\n"
+"}\n"
+"\n"
+"QComboBox {\n"
+"border: 1px solid black;\n"
+"    padding: 0px 18px 0px 3px;\n"
+"    min-width: 6em;\n"
+"\n"
+"}\n"
+"\n"
+"QComboBox::item {\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QComboBox:editable {\n"
+"    background: white;\n"
+"}\n"
+"\n"
+"QComboBox:!editable, QComboBox::drop-down:editable {\n"
+"background: white;\n"
+"}\n"
+"\n"
+"/* QComboBox gets the \"on\" state when the popup is open */\n"
+"QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
+"background: white;\n"
+"}\n"
+"\n"
+"\n"
+"QComboBox::drop-down {\n"
+"border-left: 1px solid black;\n"
+"border-right: 1px solid black;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    width: 60px;\n"
+"     height: 50px;\n"
+"\n"
+"}\n"
+"\n"
+"QComboBox::down-arrow {\n"
+"\n"
+"image: url(./templates/img/arrows-5.png);\n"
+"width: 30px;\n"
+"height: 30px;\n"
+"\n"
+"}\n"
+"\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    selection-background-color: rgb(40, 40, 40);\n"
+"    background: white;\n"
+"}"))
+        self.rotateDisplaySettingsComboBox.setEditable(False)
+        self.rotateDisplaySettingsComboBox.setMaxVisibleItems(8)
+        self.rotateDisplaySettingsComboBox.setIconSize(QtCore.QSize(30, 30))
+        self.rotateDisplaySettingsComboBox.setObjectName(_fromUtf8("rotateDisplaySettingsComboBox"))
+        self.rotateDisplaySettingsComboBox.addItem(_fromUtf8(""))
+        self.rotateDisplaySettingsComboBox.addItem(_fromUtf8(""))
+        self.rotateDisplaySettingsLabel = QtGui.QLabel(self.rotateDisplaySettingsPage)
+        self.rotateDisplaySettingsLabel.setGeometry(QtCore.QRect(10, 10, 461, 31))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Light"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.rotateDisplaySettingsLabel.setFont(font)
+        self.rotateDisplaySettingsLabel.setStyleSheet(_fromUtf8("color: rgb(255, 255, 255);"))
+        self.rotateDisplaySettingsLabel.setObjectName(_fromUtf8("rotateDisplaySettingsLabel"))
+        self.stackedWidget.addWidget(self.rotateDisplaySettingsPage)
         self.networkInfoPage = QtGui.QWidget()
         self.networkInfoPage.setObjectName(_fromUtf8("networkInfoPage"))
         self.hostnameLabel = QtGui.QLabel(self.networkInfoPage)
@@ -1803,7 +2408,6 @@ class Ui_MainWindow(object):
         self.logTextEdit.setFont(font)
         self.logTextEdit.setStyleSheet(_fromUtf8("QTextEdit{\n"
 "background-color:  rgb(40, 40, 40);\n"
-"font-color: white;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
@@ -6524,7 +7128,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.mainApplication)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(10)
         self.controlTabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -6553,8 +7157,8 @@ class Ui_MainWindow(object):
         self.menuSettingsButton.setText(_translate("MainWindow", "Settings", None))
         self.menuCartButton.setText(_translate("MainWindow", "Cart", None))
         self.menuCaliberateButton.setText(_translate("MainWindow", "Calibrate", None))
-        self.networkInfoButton.setText(_translate("MainWindow", "Network info", None))
-        self.configureWifiButton.setText(_translate("MainWindow", "Configure WiFi", None))
+        self.networkSettingsButton.setText(_translate("MainWindow", "Network Settings", None))
+        self.displaySettingsButton.setText(_translate("MainWindow", "Display Settings", None))
         self.pairPhoneButton.setText(_translate("MainWindow", "Open in Smartphone", None))
         self.OTAButton.setText(_translate("MainWindow", "Check for Updates", None))
         self.caliberateTouch.setText(_translate("MainWindow", "Caliberate Touch", None))
@@ -6568,6 +7172,23 @@ class Ui_MainWindow(object):
         self.wifiSettingsCancelButton.setText(_translate("MainWindow", "Cancel", None))
         self.wifiSettingsSSIDKeyboardButton.setText(_translate("MainWindow", "...", None))
         self.hiddenCheckBox.setText(_translate("MainWindow", "Hidden ", None))
+        self.ethSettingsDoneButton.setText(_translate("MainWindow", "Done", None))
+        self.ethSettingsCancelButton.setText(_translate("MainWindow", "Cancel", None))
+        self.ethStaticCheckBox.setText(_translate("MainWindow", "Static IP", None))
+        self.ethStaticIpLabel.setText(_translate("MainWindow", "IP Address", None))
+        self.ethStaticGatewayLabel.setText(_translate("MainWindow", "Gateway", None))
+        self.ethStaticGatewayKeyboardButton.setText(_translate("MainWindow", "...", None))
+        self.ethStaticIpKeyboardButton.setText(_translate("MainWindow", "...", None))
+        self.networkInfoButton.setText(_translate("MainWindow", "Network info", None))
+        self.configureWifiButton.setText(_translate("MainWindow", "Configure WiFi", None))
+        self.configureEthButton.setText(_translate("MainWindow", "Configure Ethernet", None))
+        self.calibrateTouch.setText(_translate("MainWindow", "Calibrate Touch", None))
+        self.rotateDisplay.setText(_translate("MainWindow", "Rotate Display", None))
+        self.rotateDisplaySettingsDoneButton.setText(_translate("MainWindow", "Done", None))
+        self.rotateDisplaySettingsCancelButton.setText(_translate("MainWindow", "Cancel", None))
+        self.rotateDisplaySettingsComboBox.setItemText(0, _translate("MainWindow", "Normal", None))
+        self.rotateDisplaySettingsComboBox.setItemText(1, _translate("MainWindow", "Flipped", None))
+        self.rotateDisplaySettingsLabel.setText(_translate("MainWindow", "Rotation", None))
         self.hostnameLabel.setText(_translate("MainWindow", "URL: ", None))
         self.hostname.setText(_translate("MainWindow", "Hostname", None))
         self.wifiIpLabel.setText(_translate("MainWindow", "Wi-Fi IP address: ", None))

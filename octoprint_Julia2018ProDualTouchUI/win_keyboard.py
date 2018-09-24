@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Keyboard.ui'
+# Form implementation generated from reading ui file 'win_keyboard.ui'
 #
 # Created by: PyQt4 UI code generator 4.11.4
 #
@@ -22,22 +22,21 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName(_fromUtf8("Form"))
-        Form.resize(480, 320)
-        self.textEdit = QtGui.QTextEdit(Form)
-        self.textEdit.setGeometry(QtCore.QRect(0, 0, 481, 81))
+class Ui_WinKeyboard(object):
+    def setupUi(self, WinKeyboard):
+        WinKeyboard.setObjectName(_fromUtf8("WinKeyboard"))
+        WinKeyboard.resize(480, 320)
+        self.tbDisplay = QtGui.QTextEdit(WinKeyboard)
+        self.tbDisplay.setGeometry(QtCore.QRect(0, 0, 288, 81))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(14)
-        self.textEdit.setFont(font)
-        self.textEdit.setStyleSheet(_fromUtf8("background-color:  rgb(40, 40, 40);\n"
-"font-color: white;\n"
+        self.tbDisplay.setFont(font)
+        self.tbDisplay.setStyleSheet(_fromUtf8("background-color:  rgb(40, 40, 40);\n"
 "color: rgb(255, 255, 255);"))
-        self.textEdit.setObjectName(_fromUtf8("textEdit"))
-        self.stackedWidget = QtGui.QStackedWidget(Form)
-        self.stackedWidget.setGeometry(QtCore.QRect(0, 80, 480, 250))
+        self.tbDisplay.setObjectName(_fromUtf8("tbDisplay"))
+        self.pageHolder = QtGui.QStackedWidget(WinKeyboard)
+        self.pageHolder.setGeometry(QtCore.QRect(0, 80, 480, 250))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
@@ -45,21 +44,19 @@ class Ui_Form(object):
         font.setItalic(False)
         font.setUnderline(False)
         font.setWeight(50)
-        self.stackedWidget.setFont(font)
-        self.stackedWidget.setObjectName(_fromUtf8("stackedWidget"))
-        self.page = QtGui.QWidget()
-        self.page.setObjectName(_fromUtf8("page"))
-        self.ButtonLowerCase = QtGui.QPushButton(self.page)
-        self.ButtonLowerCase.setGeometry(QtCore.QRect(0, 120, 48, 60))
+        self.pageHolder.setFont(font)
+        self.pageHolder.setObjectName(_fromUtf8("pageHolder"))
+        self.pgAlpha = QtGui.QWidget()
+        self.pgAlpha.setObjectName(_fromUtf8("pgAlpha"))
+        self.bt48 = QtGui.QPushButton(self.pgAlpha)
+        self.bt48.setGeometry(QtCore.QRect(48, 120, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.ButtonLowerCase.setFont(font)
-        self.ButtonLowerCase.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt48.setFont(font)
+        self.bt48.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    border-top: none;\n"
@@ -85,168 +82,470 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.ButtonLowerCase.setText(_fromUtf8(""))
+        self.bt48.setObjectName(_fromUtf8("bt48"))
+        self.bt52 = QtGui.QPushButton(self.pgAlpha)
+        self.bt52.setGeometry(QtCore.QRect(240, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt52.setFont(font)
+        self.bt52.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt52.setObjectName(_fromUtf8("bt52"))
+        self.bt42 = QtGui.QPushButton(self.pgAlpha)
+        self.bt42.setGeometry(QtCore.QRect(144, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt42.setFont(font)
+        self.bt42.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt42.setObjectName(_fromUtf8("bt42"))
+        self.bt54 = QtGui.QPushButton(self.pgAlpha)
+        self.bt54.setGeometry(QtCore.QRect(336, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt54.setFont(font)
+        self.bt54.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt54.setObjectName(_fromUtf8("bt54"))
+        self.bt35 = QtGui.QPushButton(self.pgAlpha)
+        self.bt35.setGeometry(QtCore.QRect(288, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt35.setFont(font)
+        self.bt35.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt35.setObjectName(_fromUtf8("bt35"))
+        self.bt45 = QtGui.QPushButton(self.pgAlpha)
+        self.bt45.setGeometry(QtCore.QRect(288, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt45.setFont(font)
+        self.bt45.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt45.setObjectName(_fromUtf8("bt45"))
+        self.bt53 = QtGui.QPushButton(self.pgAlpha)
+        self.bt53.setGeometry(QtCore.QRect(288, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt53.setFont(font)
+        self.bt53.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt53.setObjectName(_fromUtf8("bt53"))
+        self.bt33 = QtGui.QPushButton(self.pgAlpha)
+        self.bt33.setGeometry(QtCore.QRect(192, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt33.setFont(font)
+        self.bt33.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt33.setObjectName(_fromUtf8("bt33"))
+        self.bt43 = QtGui.QPushButton(self.pgAlpha)
+        self.bt43.setGeometry(QtCore.QRect(192, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt43.setFont(font)
+        self.bt43.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt43.setObjectName(_fromUtf8("bt43"))
+        self.bt40 = QtGui.QPushButton(self.pgAlpha)
+        self.bt40.setGeometry(QtCore.QRect(48, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt40.setFont(font)
+        self.bt40.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt40.setObjectName(_fromUtf8("bt40"))
+        self.bt29 = QtGui.QPushButton(self.pgAlpha)
+        self.bt29.setGeometry(QtCore.QRect(0, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt29.setFont(font)
+        self.bt29.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt29.setObjectName(_fromUtf8("bt29"))
+        self.bt30 = QtGui.QPushButton(self.pgAlpha)
+        self.bt30.setGeometry(QtCore.QRect(48, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt30.setFont(font)
+        self.bt30.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt30.setObjectName(_fromUtf8("bt30"))
+        self.bt38 = QtGui.QPushButton(self.pgAlpha)
+        self.bt38.setGeometry(QtCore.QRect(432, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt38.setFont(font)
+        self.bt38.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt38.setObjectName(_fromUtf8("bt38"))
+        self.btCaseAlpha = QtGui.QPushButton(self.pgAlpha)
+        self.btCaseAlpha.setGeometry(QtCore.QRect(0, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btCaseAlpha.setFont(font)
+        self.btCaseAlpha.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btCaseAlpha.setText(_fromUtf8(""))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/caps-lock-button.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.ButtonLowerCase.setIcon(icon)
-        self.ButtonLowerCase.setObjectName(_fromUtf8("ButtonLowerCase"))
-        self.Button1 = QtGui.QPushButton(self.page)
-        self.Button1.setGeometry(QtCore.QRect(0, 0, 48, 60))
+        self.btCaseAlpha.setIcon(icon)
+        self.btCaseAlpha.setObjectName(_fromUtf8("btCaseAlpha"))
+        self.bt49 = QtGui.QPushButton(self.pgAlpha)
+        self.bt49.setGeometry(QtCore.QRect(96, 120, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button1.setFont(font)
-        self.Button1.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button1.setObjectName(_fromUtf8("Button1"))
-        self.Button11 = QtGui.QPushButton(self.page)
-        self.Button11.setGeometry(QtCore.QRect(0, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button11.setFont(font)
-        self.Button11.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button11.setObjectName(_fromUtf8("Button11"))
-        self.Button2 = QtGui.QPushButton(self.page)
-        self.Button2.setGeometry(QtCore.QRect(48, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button2.setFont(font)
-        self.Button2.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button2.setObjectName(_fromUtf8("Button2"))
-        self.Button12 = QtGui.QPushButton(self.page)
-        self.Button12.setGeometry(QtCore.QRect(48, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button12.setFont(font)
-        self.Button12.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button12.setObjectName(_fromUtf8("Button12"))
-        self.Button20 = QtGui.QPushButton(self.page)
-        self.Button20.setGeometry(QtCore.QRect(48, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button20.setFont(font)
-        self.Button20.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt49.setFont(font)
+        self.bt49.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    border-top: none;\n"
@@ -272,18 +571,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button20.setObjectName(_fromUtf8("Button20"))
-        self.Button3 = QtGui.QPushButton(self.page)
-        self.Button3.setGeometry(QtCore.QRect(96, 0, 48, 60))
+        self.bt49.setObjectName(_fromUtf8("bt49"))
+        self.bt31 = QtGui.QPushButton(self.pgAlpha)
+        self.bt31.setGeometry(QtCore.QRect(96, 0, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button3.setFont(font)
-        self.Button3.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt31.setFont(font)
+        self.bt31.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "border-bottom: none;\n"
@@ -309,91 +606,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button3.setObjectName(_fromUtf8("Button3"))
-        self.Button13 = QtGui.QPushButton(self.page)
-        self.Button13.setGeometry(QtCore.QRect(96, 60, 48, 60))
+        self.bt31.setObjectName(_fromUtf8("bt31"))
+        self.bt32 = QtGui.QPushButton(self.pgAlpha)
+        self.bt32.setGeometry(QtCore.QRect(144, 0, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button13.setFont(font)
-        self.Button13.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button13.setObjectName(_fromUtf8("Button13"))
-        self.Button21 = QtGui.QPushButton(self.page)
-        self.Button21.setGeometry(QtCore.QRect(96, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button21.setFont(font)
-        self.Button21.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button21.setObjectName(_fromUtf8("Button21"))
-        self.Button4 = QtGui.QPushButton(self.page)
-        self.Button4.setGeometry(QtCore.QRect(144, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button4.setFont(font)
-        self.Button4.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt32.setFont(font)
+        self.bt32.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "border-bottom: none;\n"
@@ -419,18 +641,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button4.setObjectName(_fromUtf8("Button4"))
-        self.Button14 = QtGui.QPushButton(self.page)
-        self.Button14.setGeometry(QtCore.QRect(144, 60, 48, 60))
+        self.bt32.setObjectName(_fromUtf8("bt32"))
+        self.bt44 = QtGui.QPushButton(self.pgAlpha)
+        self.bt44.setGeometry(QtCore.QRect(240, 60, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button14.setFont(font)
-        self.Button14.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt44.setFont(font)
+        self.bt44.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
@@ -455,55 +675,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button14.setObjectName(_fromUtf8("Button14"))
-        self.Button22 = QtGui.QPushButton(self.page)
-        self.Button22.setGeometry(QtCore.QRect(144, 120, 48, 60))
+        self.bt44.setObjectName(_fromUtf8("bt44"))
+        self.bt37 = QtGui.QPushButton(self.pgAlpha)
+        self.bt37.setGeometry(QtCore.QRect(384, 0, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button22.setFont(font)
-        self.Button22.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button22.setObjectName(_fromUtf8("Button22"))
-        self.Button5 = QtGui.QPushButton(self.page)
-        self.Button5.setGeometry(QtCore.QRect(192, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button5.setFont(font)
-        self.Button5.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt37.setFont(font)
+        self.bt37.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "border-bottom: none;\n"
@@ -529,18 +710,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button5.setObjectName(_fromUtf8("Button5"))
-        self.Button15 = QtGui.QPushButton(self.page)
-        self.Button15.setGeometry(QtCore.QRect(192, 60, 48, 60))
+        self.bt37.setObjectName(_fromUtf8("bt37"))
+        self.bt46 = QtGui.QPushButton(self.pgAlpha)
+        self.bt46.setGeometry(QtCore.QRect(336, 60, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button15.setFont(font)
-        self.Button15.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt46.setFont(font)
+        self.bt46.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
@@ -565,18 +744,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button15.setObjectName(_fromUtf8("Button15"))
-        self.Button23 = QtGui.QPushButton(self.page)
-        self.Button23.setGeometry(QtCore.QRect(192, 120, 48, 60))
+        self.bt46.setObjectName(_fromUtf8("bt46"))
+        self.bt55 = QtGui.QPushButton(self.pgAlpha)
+        self.bt55.setGeometry(QtCore.QRect(384, 120, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button23.setFont(font)
-        self.Button23.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt55.setFont(font)
+        self.bt55.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    border-top: none;\n"
@@ -602,18 +779,85 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button23.setObjectName(_fromUtf8("Button23"))
-        self.Button6 = QtGui.QPushButton(self.page)
-        self.Button6.setGeometry(QtCore.QRect(240, 0, 48, 60))
+        self.bt55.setObjectName(_fromUtf8("bt55"))
+        self.bt41 = QtGui.QPushButton(self.pgAlpha)
+        self.bt41.setGeometry(QtCore.QRect(96, 60, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button6.setFont(font)
-        self.Button6.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt41.setFont(font)
+        self.bt41.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt41.setObjectName(_fromUtf8("bt41"))
+        self.bt51 = QtGui.QPushButton(self.pgAlpha)
+        self.bt51.setGeometry(QtCore.QRect(192, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt51.setFont(font)
+        self.bt51.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt51.setObjectName(_fromUtf8("bt51"))
+        self.bt36 = QtGui.QPushButton(self.pgAlpha)
+        self.bt36.setGeometry(QtCore.QRect(336, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt36.setFont(font)
+        self.bt36.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "border-bottom: none;\n"
@@ -639,18 +883,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button6.setObjectName(_fromUtf8("Button6"))
-        self.Button16 = QtGui.QPushButton(self.page)
-        self.Button16.setGeometry(QtCore.QRect(240, 60, 48, 60))
+        self.bt36.setObjectName(_fromUtf8("bt36"))
+        self.bt39 = QtGui.QPushButton(self.pgAlpha)
+        self.bt39.setGeometry(QtCore.QRect(0, 60, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button16.setFont(font)
-        self.Button16.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt39.setFont(font)
+        self.bt39.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
@@ -675,18 +917,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button16.setObjectName(_fromUtf8("Button16"))
-        self.Button24 = QtGui.QPushButton(self.page)
-        self.Button24.setGeometry(QtCore.QRect(240, 120, 48, 60))
+        self.bt39.setObjectName(_fromUtf8("bt39"))
+        self.bt50 = QtGui.QPushButton(self.pgAlpha)
+        self.bt50.setGeometry(QtCore.QRect(144, 120, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button24.setFont(font)
-        self.Button24.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt50.setFont(font)
+        self.bt50.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    border-top: none;\n"
@@ -712,21 +952,17 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button24.setObjectName(_fromUtf8("Button24"))
-        self.Button7 = QtGui.QPushButton(self.page)
-        self.Button7.setGeometry(QtCore.QRect(288, 0, 48, 60))
+        self.bt50.setObjectName(_fromUtf8("bt50"))
+        self.btBackspaceAlpha = QtGui.QPushButton(self.pgAlpha)
+        self.btBackspaceAlpha.setGeometry(QtCore.QRect(432, 60, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button7.setFont(font)
-        self.Button7.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.btBackspaceAlpha.setFont(font)
+        self.btBackspaceAlpha.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "    \n"
 "\n"
@@ -749,351 +985,21 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button7.setObjectName(_fromUtf8("Button7"))
-        self.Button17 = QtGui.QPushButton(self.page)
-        self.Button17.setGeometry(QtCore.QRect(288, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button17.setFont(font)
-        self.Button17.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button17.setObjectName(_fromUtf8("Button17"))
-        self.Button25 = QtGui.QPushButton(self.page)
-        self.Button25.setGeometry(QtCore.QRect(288, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button25.setFont(font)
-        self.Button25.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button25.setObjectName(_fromUtf8("Button25"))
-        self.Button8 = QtGui.QPushButton(self.page)
-        self.Button8.setGeometry(QtCore.QRect(336, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button8.setFont(font)
-        self.Button8.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button8.setObjectName(_fromUtf8("Button8"))
-        self.Button18 = QtGui.QPushButton(self.page)
-        self.Button18.setGeometry(QtCore.QRect(336, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button18.setFont(font)
-        self.Button18.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button18.setObjectName(_fromUtf8("Button18"))
-        self.Button26 = QtGui.QPushButton(self.page)
-        self.Button26.setGeometry(QtCore.QRect(336, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button26.setFont(font)
-        self.Button26.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button26.setObjectName(_fromUtf8("Button26"))
-        self.Button9 = QtGui.QPushButton(self.page)
-        self.Button9.setGeometry(QtCore.QRect(384, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button9.setFont(font)
-        self.Button9.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button9.setObjectName(_fromUtf8("Button9"))
-        self.Button19 = QtGui.QPushButton(self.page)
-        self.Button19.setGeometry(QtCore.QRect(384, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button19.setFont(font)
-        self.Button19.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button19.setObjectName(_fromUtf8("Button19"))
-        self.Button27 = QtGui.QPushButton(self.page)
-        self.Button27.setGeometry(QtCore.QRect(384, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.Button27.setFont(font)
-        self.Button27.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button27.setObjectName(_fromUtf8("Button27"))
-        self.ButtonBackSpace = QtGui.QPushButton(self.page)
-        self.ButtonBackSpace.setGeometry(QtCore.QRect(432, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.ButtonBackSpace.setFont(font)
-        self.ButtonBackSpace.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.ButtonBackSpace.setText(_fromUtf8(""))
+        self.btBackspaceAlpha.setText(_fromUtf8(""))
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/backspace-arrow.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.ButtonBackSpace.setIcon(icon1)
-        self.ButtonBackSpace.setObjectName(_fromUtf8("ButtonBackSpace"))
-        self.Button10 = QtGui.QPushButton(self.page)
-        self.Button10.setGeometry(QtCore.QRect(432, 0, 48, 60))
+        self.btBackspaceAlpha.setIcon(icon1)
+        self.btBackspaceAlpha.setIconSize(QtCore.QSize(25, 25))
+        self.btBackspaceAlpha.setObjectName(_fromUtf8("btBackspaceAlpha"))
+        self.bt34 = QtGui.QPushButton(self.pgAlpha)
+        self.bt34.setGeometry(QtCore.QRect(240, 0, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button10.setFont(font)
-        self.Button10.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt34.setFont(font)
+        self.bt34.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "border-bottom: none;\n"
@@ -1119,18 +1025,84 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button10.setObjectName(_fromUtf8("Button10"))
-        self.Button28 = QtGui.QPushButton(self.page)
-        self.Button28.setGeometry(QtCore.QRect(432, 120, 48, 60))
+        self.bt34.setObjectName(_fromUtf8("bt34"))
+        self.bt47 = QtGui.QPushButton(self.pgAlpha)
+        self.bt47.setGeometry(QtCore.QRect(384, 60, 48, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.Button28.setFont(font)
-        self.Button28.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.bt47.setFont(font)
+        self.bt47.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt47.setObjectName(_fromUtf8("bt47"))
+        self.bt56 = QtGui.QPushButton(self.pgAlpha)
+        self.bt56.setGeometry(QtCore.QRect(432, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt56.setFont(font)
+        self.bt56.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt56.setObjectName(_fromUtf8("bt56"))
+        self.btSpaceAlpha = QtGui.QPushButton(self.pgAlpha)
+        self.btSpaceAlpha.setGeometry(QtCore.QRect(192, 180, 192, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSpaceAlpha.setFont(font)
+        self.btSpaceAlpha.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    border-top: none;\n"
@@ -1156,55 +1128,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.Button28.setObjectName(_fromUtf8("Button28"))
-        self.ButtonSpace = QtGui.QPushButton(self.page)
-        self.ButtonSpace.setGeometry(QtCore.QRect(144, 180, 192, 60))
+        self.btSpaceAlpha.setObjectName(_fromUtf8("btSpaceAlpha"))
+        self.btNumericAlpha = QtGui.QPushButton(self.pgAlpha)
+        self.btNumericAlpha.setGeometry(QtCore.QRect(0, 180, 96, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(50)
-        self.ButtonSpace.setFont(font)
-        self.ButtonSpace.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.ButtonSpace.setObjectName(_fromUtf8("ButtonSpace"))
-        self.ButtonNumeric = QtGui.QPushButton(self.page)
-        self.ButtonNumeric.setGeometry(QtCore.QRect(0, 180, 144, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.ButtonNumeric.setFont(font)
-        self.ButtonNumeric.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.btNumericAlpha.setFont(font)
+        self.btNumericAlpha.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "    border-right: none;\n"
 "    border-top: none;\n"
@@ -1230,1100 +1163,16 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.ButtonNumeric.setObjectName(_fromUtf8("ButtonNumeric"))
-        self.ButtonEnter = QtGui.QPushButton(self.page)
-        self.ButtonEnter.setGeometry(QtCore.QRect(336, 180, 144, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        self.ButtonEnter.setFont(font)
-        self.ButtonEnter.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-left: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.ButtonEnter.setObjectName(_fromUtf8("ButtonEnter"))
-        self.stackedWidget.addWidget(self.page)
-        self.page_2 = QtGui.QWidget()
-        self.page_2.setObjectName(_fromUtf8("page_2"))
-        self.Button48 = QtGui.QPushButton(self.page_2)
-        self.Button48.setGeometry(QtCore.QRect(48, 120, 48, 60))
+        self.btNumericAlpha.setObjectName(_fromUtf8("btNumericAlpha"))
+        self.btSubmitAlpha = QtGui.QPushButton(self.pgAlpha)
+        self.btSubmitAlpha.setGeometry(QtCore.QRect(384, 180, 96, 60))
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Gotham Medium"))
         font.setPointSize(14)
         font.setBold(False)
         font.setWeight(50)
-        self.Button48.setFont(font)
-        self.Button48.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button48.setObjectName(_fromUtf8("Button48"))
-        self.Button52 = QtGui.QPushButton(self.page_2)
-        self.Button52.setGeometry(QtCore.QRect(240, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button52.setFont(font)
-        self.Button52.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button52.setObjectName(_fromUtf8("Button52"))
-        self.Button42 = QtGui.QPushButton(self.page_2)
-        self.Button42.setGeometry(QtCore.QRect(144, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button42.setFont(font)
-        self.Button42.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button42.setObjectName(_fromUtf8("Button42"))
-        self.Button54 = QtGui.QPushButton(self.page_2)
-        self.Button54.setGeometry(QtCore.QRect(336, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button54.setFont(font)
-        self.Button54.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button54.setObjectName(_fromUtf8("Button54"))
-        self.Button35 = QtGui.QPushButton(self.page_2)
-        self.Button35.setGeometry(QtCore.QRect(288, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button35.setFont(font)
-        self.Button35.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button35.setObjectName(_fromUtf8("Button35"))
-        self.Button45 = QtGui.QPushButton(self.page_2)
-        self.Button45.setGeometry(QtCore.QRect(288, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button45.setFont(font)
-        self.Button45.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button45.setObjectName(_fromUtf8("Button45"))
-        self.Button53 = QtGui.QPushButton(self.page_2)
-        self.Button53.setGeometry(QtCore.QRect(288, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button53.setFont(font)
-        self.Button53.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button53.setObjectName(_fromUtf8("Button53"))
-        self.Button33 = QtGui.QPushButton(self.page_2)
-        self.Button33.setGeometry(QtCore.QRect(192, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button33.setFont(font)
-        self.Button33.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button33.setObjectName(_fromUtf8("Button33"))
-        self.Button43 = QtGui.QPushButton(self.page_2)
-        self.Button43.setGeometry(QtCore.QRect(192, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button43.setFont(font)
-        self.Button43.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button43.setObjectName(_fromUtf8("Button43"))
-        self.Button40 = QtGui.QPushButton(self.page_2)
-        self.Button40.setGeometry(QtCore.QRect(48, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button40.setFont(font)
-        self.Button40.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button40.setObjectName(_fromUtf8("Button40"))
-        self.Button29 = QtGui.QPushButton(self.page_2)
-        self.Button29.setGeometry(QtCore.QRect(0, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button29.setFont(font)
-        self.Button29.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button29.setObjectName(_fromUtf8("Button29"))
-        self.Button30 = QtGui.QPushButton(self.page_2)
-        self.Button30.setGeometry(QtCore.QRect(48, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button30.setFont(font)
-        self.Button30.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button30.setObjectName(_fromUtf8("Button30"))
-        self.Button38 = QtGui.QPushButton(self.page_2)
-        self.Button38.setGeometry(QtCore.QRect(432, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button38.setFont(font)
-        self.Button38.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button38.setObjectName(_fromUtf8("Button38"))
-        self.ButtonUpperCase = QtGui.QPushButton(self.page_2)
-        self.ButtonUpperCase.setGeometry(QtCore.QRect(0, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.ButtonUpperCase.setFont(font)
-        self.ButtonUpperCase.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.ButtonUpperCase.setText(_fromUtf8(""))
-        self.ButtonUpperCase.setIcon(icon)
-        self.ButtonUpperCase.setObjectName(_fromUtf8("ButtonUpperCase"))
-        self.Button49 = QtGui.QPushButton(self.page_2)
-        self.Button49.setGeometry(QtCore.QRect(96, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button49.setFont(font)
-        self.Button49.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button49.setObjectName(_fromUtf8("Button49"))
-        self.Button31 = QtGui.QPushButton(self.page_2)
-        self.Button31.setGeometry(QtCore.QRect(96, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button31.setFont(font)
-        self.Button31.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button31.setObjectName(_fromUtf8("Button31"))
-        self.Button32 = QtGui.QPushButton(self.page_2)
-        self.Button32.setGeometry(QtCore.QRect(144, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button32.setFont(font)
-        self.Button32.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button32.setObjectName(_fromUtf8("Button32"))
-        self.Button44 = QtGui.QPushButton(self.page_2)
-        self.Button44.setGeometry(QtCore.QRect(240, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button44.setFont(font)
-        self.Button44.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button44.setObjectName(_fromUtf8("Button44"))
-        self.Button37 = QtGui.QPushButton(self.page_2)
-        self.Button37.setGeometry(QtCore.QRect(384, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button37.setFont(font)
-        self.Button37.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button37.setObjectName(_fromUtf8("Button37"))
-        self.Button46 = QtGui.QPushButton(self.page_2)
-        self.Button46.setGeometry(QtCore.QRect(336, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button46.setFont(font)
-        self.Button46.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button46.setObjectName(_fromUtf8("Button46"))
-        self.Button55 = QtGui.QPushButton(self.page_2)
-        self.Button55.setGeometry(QtCore.QRect(384, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button55.setFont(font)
-        self.Button55.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button55.setObjectName(_fromUtf8("Button55"))
-        self.Button41 = QtGui.QPushButton(self.page_2)
-        self.Button41.setGeometry(QtCore.QRect(96, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button41.setFont(font)
-        self.Button41.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button41.setObjectName(_fromUtf8("Button41"))
-        self.Button51 = QtGui.QPushButton(self.page_2)
-        self.Button51.setGeometry(QtCore.QRect(192, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button51.setFont(font)
-        self.Button51.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button51.setObjectName(_fromUtf8("Button51"))
-        self.Button36 = QtGui.QPushButton(self.page_2)
-        self.Button36.setGeometry(QtCore.QRect(336, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button36.setFont(font)
-        self.Button36.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button36.setObjectName(_fromUtf8("Button36"))
-        self.Button39 = QtGui.QPushButton(self.page_2)
-        self.Button39.setGeometry(QtCore.QRect(0, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button39.setFont(font)
-        self.Button39.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button39.setObjectName(_fromUtf8("Button39"))
-        self.Button50 = QtGui.QPushButton(self.page_2)
-        self.Button50.setGeometry(QtCore.QRect(144, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button50.setFont(font)
-        self.Button50.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button50.setObjectName(_fromUtf8("Button50"))
-        self.ButtonBackSpace2 = QtGui.QPushButton(self.page_2)
-        self.ButtonBackSpace2.setGeometry(QtCore.QRect(432, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.ButtonBackSpace2.setFont(font)
-        self.ButtonBackSpace2.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.ButtonBackSpace2.setText(_fromUtf8(""))
-        self.ButtonBackSpace2.setIcon(icon1)
-        self.ButtonBackSpace2.setObjectName(_fromUtf8("ButtonBackSpace2"))
-        self.Button34 = QtGui.QPushButton(self.page_2)
-        self.Button34.setGeometry(QtCore.QRect(240, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button34.setFont(font)
-        self.Button34.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button34.setObjectName(_fromUtf8("Button34"))
-        self.Button47 = QtGui.QPushButton(self.page_2)
-        self.Button47.setGeometry(QtCore.QRect(384, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button47.setFont(font)
-        self.Button47.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button47.setObjectName(_fromUtf8("Button47"))
-        self.Button56 = QtGui.QPushButton(self.page_2)
-        self.Button56.setGeometry(QtCore.QRect(432, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button56.setFont(font)
-        self.Button56.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button56.setObjectName(_fromUtf8("Button56"))
-        self.ButtonSpace2 = QtGui.QPushButton(self.page_2)
-        self.ButtonSpace2.setGeometry(QtCore.QRect(144, 180, 192, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.ButtonSpace2.setFont(font)
-        self.ButtonSpace2.setStyleSheet(_fromUtf8("QPushButton {\n"
+        self.btSubmitAlpha.setFont(font)
+        self.btSubmitAlpha.setStyleSheet(_fromUtf8("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
 "\n"
 "    border-top: none;\n"
@@ -2349,1551 +1198,3483 @@ class Ui_Form(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}"))
-        self.ButtonSpace2.setObjectName(_fromUtf8("ButtonSpace2"))
-        self.ButtonNumeric2 = QtGui.QPushButton(self.page_2)
-        self.ButtonNumeric2.setGeometry(QtCore.QRect(0, 180, 144, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.ButtonNumeric2.setFont(font)
-        self.ButtonNumeric2.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.ButtonNumeric2.setObjectName(_fromUtf8("ButtonNumeric2"))
-        self.ButtonEnter2 = QtGui.QPushButton(self.page_2)
-        self.ButtonEnter2.setGeometry(QtCore.QRect(336, 180, 144, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.ButtonEnter2.setFont(font)
-        self.ButtonEnter2.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-left: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.ButtonEnter2.setObjectName(_fromUtf8("ButtonEnter2"))
-        self.stackedWidget.addWidget(self.page_2)
-        self.page_11 = QtGui.QWidget()
-        self.page_11.setObjectName(_fromUtf8("page_11"))
-        self.Button78 = QtGui.QPushButton(self.page_11)
-        self.Button78.setGeometry(QtCore.QRect(48, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button78.setFont(font)
-        self.Button78.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button78.setObjectName(_fromUtf8("Button78"))
-        self.Button82 = QtGui.QPushButton(self.page_11)
-        self.Button82.setGeometry(QtCore.QRect(240, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button82.setFont(font)
-        self.Button82.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button82.setObjectName(_fromUtf8("Button82"))
-        self.Button70 = QtGui.QPushButton(self.page_11)
-        self.Button70.setGeometry(QtCore.QRect(144, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button70.setFont(font)
-        self.Button70.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button70.setObjectName(_fromUtf8("Button70"))
-        self.Button84 = QtGui.QPushButton(self.page_11)
-        self.Button84.setGeometry(QtCore.QRect(336, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button84.setFont(font)
-        self.Button84.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button84.setObjectName(_fromUtf8("Button84"))
-        self.Button63 = QtGui.QPushButton(self.page_11)
-        self.Button63.setGeometry(QtCore.QRect(288, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button63.setFont(font)
-        self.Button63.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button63.setObjectName(_fromUtf8("Button63"))
-        self.Button73 = QtGui.QPushButton(self.page_11)
-        self.Button73.setGeometry(QtCore.QRect(288, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button73.setFont(font)
-        self.Button73.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button73.setObjectName(_fromUtf8("Button73"))
-        self.Button83 = QtGui.QPushButton(self.page_11)
-        self.Button83.setGeometry(QtCore.QRect(288, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button83.setFont(font)
-        self.Button83.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button83.setObjectName(_fromUtf8("Button83"))
-        self.Button61 = QtGui.QPushButton(self.page_11)
-        self.Button61.setGeometry(QtCore.QRect(192, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button61.setFont(font)
-        self.Button61.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button61.setObjectName(_fromUtf8("Button61"))
-        self.Button71 = QtGui.QPushButton(self.page_11)
-        self.Button71.setGeometry(QtCore.QRect(192, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button71.setFont(font)
-        self.Button71.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button71.setObjectName(_fromUtf8("Button71"))
-        self.Button68 = QtGui.QPushButton(self.page_11)
-        self.Button68.setGeometry(QtCore.QRect(48, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button68.setFont(font)
-        self.Button68.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button68.setObjectName(_fromUtf8("Button68"))
-        self.Button57 = QtGui.QPushButton(self.page_11)
-        self.Button57.setGeometry(QtCore.QRect(0, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button57.setFont(font)
-        self.Button57.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button57.setObjectName(_fromUtf8("Button57"))
-        self.Button58 = QtGui.QPushButton(self.page_11)
-        self.Button58.setGeometry(QtCore.QRect(48, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button58.setFont(font)
-        self.Button58.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button58.setObjectName(_fromUtf8("Button58"))
-        self.Button66 = QtGui.QPushButton(self.page_11)
-        self.Button66.setGeometry(QtCore.QRect(432, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button66.setFont(font)
-        self.Button66.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button66.setObjectName(_fromUtf8("Button66"))
-        self.Button77 = QtGui.QPushButton(self.page_11)
-        self.Button77.setGeometry(QtCore.QRect(0, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button77.setFont(font)
-        self.Button77.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button77.setObjectName(_fromUtf8("Button77"))
-        self.Button79 = QtGui.QPushButton(self.page_11)
-        self.Button79.setGeometry(QtCore.QRect(96, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button79.setFont(font)
-        self.Button79.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button79.setObjectName(_fromUtf8("Button79"))
-        self.Button59 = QtGui.QPushButton(self.page_11)
-        self.Button59.setGeometry(QtCore.QRect(96, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button59.setFont(font)
-        self.Button59.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button59.setObjectName(_fromUtf8("Button59"))
-        self.Button60 = QtGui.QPushButton(self.page_11)
-        self.Button60.setGeometry(QtCore.QRect(144, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button60.setFont(font)
-        self.Button60.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button60.setObjectName(_fromUtf8("Button60"))
-        self.Button72 = QtGui.QPushButton(self.page_11)
-        self.Button72.setGeometry(QtCore.QRect(240, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button72.setFont(font)
-        self.Button72.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button72.setObjectName(_fromUtf8("Button72"))
-        self.Button65 = QtGui.QPushButton(self.page_11)
-        self.Button65.setGeometry(QtCore.QRect(384, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button65.setFont(font)
-        self.Button65.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button65.setObjectName(_fromUtf8("Button65"))
-        self.Button74 = QtGui.QPushButton(self.page_11)
-        self.Button74.setGeometry(QtCore.QRect(336, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button74.setFont(font)
-        self.Button74.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button74.setObjectName(_fromUtf8("Button74"))
-        self.Button85 = QtGui.QPushButton(self.page_11)
-        self.Button85.setGeometry(QtCore.QRect(384, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button85.setFont(font)
-        self.Button85.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button85.setObjectName(_fromUtf8("Button85"))
-        self.Button69 = QtGui.QPushButton(self.page_11)
-        self.Button69.setGeometry(QtCore.QRect(96, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button69.setFont(font)
-        self.Button69.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button69.setObjectName(_fromUtf8("Button69"))
-        self.Button81 = QtGui.QPushButton(self.page_11)
-        self.Button81.setGeometry(QtCore.QRect(192, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button81.setFont(font)
-        self.Button81.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button81.setObjectName(_fromUtf8("Button81"))
-        self.Button64 = QtGui.QPushButton(self.page_11)
-        self.Button64.setGeometry(QtCore.QRect(336, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button64.setFont(font)
-        self.Button64.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button64.setObjectName(_fromUtf8("Button64"))
-        self.Button67 = QtGui.QPushButton(self.page_11)
-        self.Button67.setGeometry(QtCore.QRect(0, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button67.setFont(font)
-        self.Button67.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button67.setObjectName(_fromUtf8("Button67"))
-        self.Button80 = QtGui.QPushButton(self.page_11)
-        self.Button80.setGeometry(QtCore.QRect(144, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button80.setFont(font)
-        self.Button80.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button80.setObjectName(_fromUtf8("Button80"))
-        self.Button76 = QtGui.QPushButton(self.page_11)
-        self.Button76.setGeometry(QtCore.QRect(432, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button76.setFont(font)
-        self.Button76.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button76.setObjectName(_fromUtf8("Button76"))
-        self.Button62 = QtGui.QPushButton(self.page_11)
-        self.Button62.setGeometry(QtCore.QRect(240, 0, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button62.setFont(font)
-        self.Button62.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"border-bottom: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button62.setObjectName(_fromUtf8("Button62"))
-        self.Button75 = QtGui.QPushButton(self.page_11)
-        self.Button75.setGeometry(QtCore.QRect(384, 60, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button75.setFont(font)
-        self.Button75.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button75.setObjectName(_fromUtf8("Button75"))
-        self.Button86 = QtGui.QPushButton(self.page_11)
-        self.Button86.setGeometry(QtCore.QRect(432, 120, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button86.setFont(font)
-        self.Button86.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button86.setObjectName(_fromUtf8("Button86"))
-        self.Button90 = QtGui.QPushButton(self.page_11)
-        self.Button90.setGeometry(QtCore.QRect(144, 180, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button90.setFont(font)
-        self.Button90.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button90.setObjectName(_fromUtf8("Button90"))
-        self.Button91 = QtGui.QPushButton(self.page_11)
-        self.Button91.setGeometry(QtCore.QRect(192, 180, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button91.setFont(font)
-        self.Button91.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button91.setObjectName(_fromUtf8("Button91"))
-        self.Button92 = QtGui.QPushButton(self.page_11)
-        self.Button92.setGeometry(QtCore.QRect(240, 180, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button92.setFont(font)
-        self.Button92.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button92.setObjectName(_fromUtf8("Button92"))
-        self.Button93 = QtGui.QPushButton(self.page_11)
-        self.Button93.setGeometry(QtCore.QRect(288, 180, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button93.setFont(font)
-        self.Button93.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button93.setObjectName(_fromUtf8("Button93"))
-        self.Button87 = QtGui.QPushButton(self.page_11)
-        self.Button87.setGeometry(QtCore.QRect(384, 180, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button87.setFont(font)
-        self.Button87.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button87.setObjectName(_fromUtf8("Button87"))
-        self.Button88 = QtGui.QPushButton(self.page_11)
-        self.Button88.setGeometry(QtCore.QRect(432, 180, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button88.setFont(font)
-        self.Button88.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button88.setObjectName(_fromUtf8("Button88"))
-        self.Button89 = QtGui.QPushButton(self.page_11)
-        self.Button89.setGeometry(QtCore.QRect(96, 180, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button89.setFont(font)
-        self.Button89.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button89.setObjectName(_fromUtf8("Button89"))
-        self.Button94 = QtGui.QPushButton(self.page_11)
-        self.Button94.setGeometry(QtCore.QRect(336, 180, 48, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.Button94.setFont(font)
-        self.Button94.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: none;\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.Button94.setObjectName(_fromUtf8("Button94"))
-        self.ButtonEnter3 = QtGui.QPushButton(self.page_11)
-        self.ButtonEnter3.setGeometry(QtCore.QRect(0, 180, 97, 60))
-        font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setWeight(50)
-        self.ButtonEnter3.setFont(font)
-        self.ButtonEnter3.setStyleSheet(_fromUtf8("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    border-right: 1px solid rgb(87, 87, 87);\n"
-"    border-top: none;\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"    \n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}"))
-        self.ButtonEnter3.setText(_fromUtf8(""))
+        self.btSubmitAlpha.setText(_fromUtf8(""))
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/back-arrow.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.ButtonEnter3.setIcon(icon2)
-        self.ButtonEnter3.setIconSize(QtCore.QSize(45, 45))
-        self.ButtonEnter3.setObjectName(_fromUtf8("ButtonEnter3"))
-        self.stackedWidget.addWidget(self.page_11)
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/verification-mark.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btSubmitAlpha.setIcon(icon2)
+        self.btSubmitAlpha.setIconSize(QtCore.QSize(35, 35))
+        self.btSubmitAlpha.setObjectName(_fromUtf8("btSubmitAlpha"))
+        self.btSpecialAlpha = QtGui.QPushButton(self.pgAlpha)
+        self.btSpecialAlpha.setGeometry(QtCore.QRect(96, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSpecialAlpha.setFont(font)
+        self.btSpecialAlpha.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSpecialAlpha.setObjectName(_fromUtf8("btSpecialAlpha"))
+        self.pageHolder.addWidget(self.pgAlpha)
+        self.pgAlphaU = QtGui.QWidget()
+        self.pgAlphaU.setObjectName(_fromUtf8("pgAlphaU"))
+        self.btCaseAlphaU = QtGui.QPushButton(self.pgAlphaU)
+        self.btCaseAlphaU.setGeometry(QtCore.QRect(0, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.btCaseAlphaU.setFont(font)
+        self.btCaseAlphaU.setStyleSheet(_fromUtf8("QPushButton {\n"
+"    border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"   /*  border: none;  no border for a flat push button */\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btCaseAlphaU.setText(_fromUtf8(""))
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/caps-lock-button.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/caps_lock_pinned.png")), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/caps_lock_pinned.png")), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/caps_lock_pinned.png")), QtGui.QIcon.Active, QtGui.QIcon.On)
+        self.btCaseAlphaU.setIcon(icon3)
+        self.btCaseAlphaU.setCheckable(True)
+        self.btCaseAlphaU.setChecked(False)
+        self.btCaseAlphaU.setAutoDefault(False)
+        self.btCaseAlphaU.setFlat(False)
+        self.btCaseAlphaU.setObjectName(_fromUtf8("btCaseAlphaU"))
+        self.bt1 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt1.setGeometry(QtCore.QRect(0, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt1.setFont(font)
+        self.bt1.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt1.setObjectName(_fromUtf8("bt1"))
+        self.bt11 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt11.setGeometry(QtCore.QRect(0, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt11.setFont(font)
+        self.bt11.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt11.setObjectName(_fromUtf8("bt11"))
+        self.bt2 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt2.setGeometry(QtCore.QRect(48, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt2.setFont(font)
+        self.bt2.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt2.setObjectName(_fromUtf8("bt2"))
+        self.bt12 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt12.setGeometry(QtCore.QRect(48, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt12.setFont(font)
+        self.bt12.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt12.setObjectName(_fromUtf8("bt12"))
+        self.bt20 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt20.setGeometry(QtCore.QRect(48, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt20.setFont(font)
+        self.bt20.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt20.setObjectName(_fromUtf8("bt20"))
+        self.bt3 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt3.setGeometry(QtCore.QRect(96, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt3.setFont(font)
+        self.bt3.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt3.setObjectName(_fromUtf8("bt3"))
+        self.bt13 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt13.setGeometry(QtCore.QRect(96, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt13.setFont(font)
+        self.bt13.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt13.setObjectName(_fromUtf8("bt13"))
+        self.bt21 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt21.setGeometry(QtCore.QRect(96, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt21.setFont(font)
+        self.bt21.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt21.setObjectName(_fromUtf8("bt21"))
+        self.bt4 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt4.setGeometry(QtCore.QRect(144, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt4.setFont(font)
+        self.bt4.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt4.setObjectName(_fromUtf8("bt4"))
+        self.bt14 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt14.setGeometry(QtCore.QRect(144, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt14.setFont(font)
+        self.bt14.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt14.setObjectName(_fromUtf8("bt14"))
+        self.bt22 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt22.setGeometry(QtCore.QRect(144, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt22.setFont(font)
+        self.bt22.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt22.setObjectName(_fromUtf8("bt22"))
+        self.bt5 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt5.setGeometry(QtCore.QRect(192, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt5.setFont(font)
+        self.bt5.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt5.setObjectName(_fromUtf8("bt5"))
+        self.bt15 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt15.setGeometry(QtCore.QRect(192, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt15.setFont(font)
+        self.bt15.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt15.setObjectName(_fromUtf8("bt15"))
+        self.bt23 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt23.setGeometry(QtCore.QRect(192, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt23.setFont(font)
+        self.bt23.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt23.setObjectName(_fromUtf8("bt23"))
+        self.bt6 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt6.setGeometry(QtCore.QRect(240, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt6.setFont(font)
+        self.bt6.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt6.setObjectName(_fromUtf8("bt6"))
+        self.bt16 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt16.setGeometry(QtCore.QRect(240, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt16.setFont(font)
+        self.bt16.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt16.setObjectName(_fromUtf8("bt16"))
+        self.bt24 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt24.setGeometry(QtCore.QRect(240, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt24.setFont(font)
+        self.bt24.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt24.setObjectName(_fromUtf8("bt24"))
+        self.bt7 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt7.setGeometry(QtCore.QRect(288, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt7.setFont(font)
+        self.bt7.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt7.setObjectName(_fromUtf8("bt7"))
+        self.bt17 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt17.setGeometry(QtCore.QRect(288, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt17.setFont(font)
+        self.bt17.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt17.setObjectName(_fromUtf8("bt17"))
+        self.bt25 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt25.setGeometry(QtCore.QRect(288, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt25.setFont(font)
+        self.bt25.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt25.setObjectName(_fromUtf8("bt25"))
+        self.bt8 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt8.setGeometry(QtCore.QRect(336, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt8.setFont(font)
+        self.bt8.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt8.setObjectName(_fromUtf8("bt8"))
+        self.bt18 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt18.setGeometry(QtCore.QRect(336, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt18.setFont(font)
+        self.bt18.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt18.setObjectName(_fromUtf8("bt18"))
+        self.bt26 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt26.setGeometry(QtCore.QRect(336, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt26.setFont(font)
+        self.bt26.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt26.setObjectName(_fromUtf8("bt26"))
+        self.bt9 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt9.setGeometry(QtCore.QRect(384, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt9.setFont(font)
+        self.bt9.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt9.setObjectName(_fromUtf8("bt9"))
+        self.bt19 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt19.setGeometry(QtCore.QRect(384, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt19.setFont(font)
+        self.bt19.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt19.setObjectName(_fromUtf8("bt19"))
+        self.bt27 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt27.setGeometry(QtCore.QRect(384, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt27.setFont(font)
+        self.bt27.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt27.setObjectName(_fromUtf8("bt27"))
+        self.btBackspaceAlphaU = QtGui.QPushButton(self.pgAlphaU)
+        self.btBackspaceAlphaU.setGeometry(QtCore.QRect(432, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.btBackspaceAlphaU.setFont(font)
+        self.btBackspaceAlphaU.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btBackspaceAlphaU.setText(_fromUtf8(""))
+        self.btBackspaceAlphaU.setIcon(icon1)
+        self.btBackspaceAlphaU.setIconSize(QtCore.QSize(25, 25))
+        self.btBackspaceAlphaU.setObjectName(_fromUtf8("btBackspaceAlphaU"))
+        self.bt10 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt10.setGeometry(QtCore.QRect(432, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt10.setFont(font)
+        self.bt10.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt10.setObjectName(_fromUtf8("bt10"))
+        self.bt28 = QtGui.QPushButton(self.pgAlphaU)
+        self.bt28.setGeometry(QtCore.QRect(432, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt28.setFont(font)
+        self.bt28.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt28.setObjectName(_fromUtf8("bt28"))
+        self.btSpecialAlphaU = QtGui.QPushButton(self.pgAlphaU)
+        self.btSpecialAlphaU.setGeometry(QtCore.QRect(96, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSpecialAlphaU.setFont(font)
+        self.btSpecialAlphaU.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSpecialAlphaU.setObjectName(_fromUtf8("btSpecialAlphaU"))
+        self.btSpaceAlphaU = QtGui.QPushButton(self.pgAlphaU)
+        self.btSpaceAlphaU.setGeometry(QtCore.QRect(192, 180, 192, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSpaceAlphaU.setFont(font)
+        self.btSpaceAlphaU.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSpaceAlphaU.setObjectName(_fromUtf8("btSpaceAlphaU"))
+        self.btNumericAlphaU = QtGui.QPushButton(self.pgAlphaU)
+        self.btNumericAlphaU.setGeometry(QtCore.QRect(0, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btNumericAlphaU.setFont(font)
+        self.btNumericAlphaU.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btNumericAlphaU.setObjectName(_fromUtf8("btNumericAlphaU"))
+        self.btSubmitAlphaU = QtGui.QPushButton(self.pgAlphaU)
+        self.btSubmitAlphaU.setGeometry(QtCore.QRect(384, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSubmitAlphaU.setFont(font)
+        self.btSubmitAlphaU.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSubmitAlphaU.setText(_fromUtf8(""))
+        self.btSubmitAlphaU.setIcon(icon2)
+        self.btSubmitAlphaU.setIconSize(QtCore.QSize(35, 35))
+        self.btSubmitAlphaU.setObjectName(_fromUtf8("btSubmitAlphaU"))
+        self.pageHolder.addWidget(self.pgAlphaU)
+        self.pgNumeric = QtGui.QWidget()
+        self.pgNumeric.setObjectName(_fromUtf8("pgNumeric"))
+        self.bt58 = QtGui.QPushButton(self.pgNumeric)
+        self.bt58.setGeometry(QtCore.QRect(96, 0, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt58.setFont(font)
+        self.bt58.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt58.setObjectName(_fromUtf8("bt58"))
+        self.bt57 = QtGui.QPushButton(self.pgNumeric)
+        self.bt57.setGeometry(QtCore.QRect(0, 0, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt57.setFont(font)
+        self.bt57.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt57.setObjectName(_fromUtf8("bt57"))
+        self.bt65 = QtGui.QPushButton(self.pgNumeric)
+        self.bt65.setGeometry(QtCore.QRect(192, 120, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt65.setFont(font)
+        self.bt65.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt65.setObjectName(_fromUtf8("bt65"))
+        self.bt62 = QtGui.QPushButton(self.pgNumeric)
+        self.bt62.setGeometry(QtCore.QRect(192, 60, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt62.setFont(font)
+        self.bt62.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt62.setObjectName(_fromUtf8("bt62"))
+        self.bt63 = QtGui.QPushButton(self.pgNumeric)
+        self.bt63.setGeometry(QtCore.QRect(0, 120, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt63.setFont(font)
+        self.bt63.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt63.setObjectName(_fromUtf8("bt63"))
+        self.bt61 = QtGui.QPushButton(self.pgNumeric)
+        self.bt61.setGeometry(QtCore.QRect(96, 60, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt61.setFont(font)
+        self.bt61.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt61.setObjectName(_fromUtf8("bt61"))
+        self.bt59 = QtGui.QPushButton(self.pgNumeric)
+        self.bt59.setGeometry(QtCore.QRect(192, 0, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt59.setFont(font)
+        self.bt59.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt59.setObjectName(_fromUtf8("bt59"))
+        self.bt64 = QtGui.QPushButton(self.pgNumeric)
+        self.bt64.setGeometry(QtCore.QRect(96, 120, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt64.setFont(font)
+        self.bt64.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt64.setObjectName(_fromUtf8("bt64"))
+        self.bt66 = QtGui.QPushButton(self.pgNumeric)
+        self.bt66.setGeometry(QtCore.QRect(192, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt66.setFont(font)
+        self.bt66.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt66.setObjectName(_fromUtf8("bt66"))
+        self.bt60 = QtGui.QPushButton(self.pgNumeric)
+        self.bt60.setGeometry(QtCore.QRect(0, 60, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt60.setFont(font)
+        self.bt60.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt60.setObjectName(_fromUtf8("bt60"))
+        self.btBackNumeric = QtGui.QPushButton(self.pgNumeric)
+        self.btBackNumeric.setGeometry(QtCore.QRect(0, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btBackNumeric.setFont(font)
+        self.btBackNumeric.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btBackNumeric.setText(_fromUtf8(""))
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/back-arrow.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btBackNumeric.setIcon(icon4)
+        self.btBackNumeric.setIconSize(QtCore.QSize(35, 35))
+        self.btBackNumeric.setObjectName(_fromUtf8("btBackNumeric"))
+        self.bt27_2 = QtGui.QPushButton(self.pgNumeric)
+        self.bt27_2.setGeometry(QtCore.QRect(288, 0, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt27_2.setFont(font)
+        self.bt27_2.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt27_2.setObjectName(_fromUtf8("bt27_2"))
+        self.btSpecialNumeric = QtGui.QPushButton(self.pgNumeric)
+        self.btSpecialNumeric.setGeometry(QtCore.QRect(96, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSpecialNumeric.setFont(font)
+        self.btSpecialNumeric.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSpecialNumeric.setObjectName(_fromUtf8("btSpecialNumeric"))
+        self.bt74_2 = QtGui.QPushButton(self.pgNumeric)
+        self.bt74_2.setGeometry(QtCore.QRect(288, 60, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt74_2.setFont(font)
+        self.bt74_2.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt74_2.setObjectName(_fromUtf8("bt74_2"))
+        self.bt79_2 = QtGui.QPushButton(self.pgNumeric)
+        self.bt79_2.setGeometry(QtCore.QRect(288, 120, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt79_2.setFont(font)
+        self.bt79_2.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt79_2.setObjectName(_fromUtf8("bt79_2"))
+        self.bt69_2 = QtGui.QPushButton(self.pgNumeric)
+        self.bt69_2.setGeometry(QtCore.QRect(288, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt69_2.setFont(font)
+        self.bt69_2.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt69_2.setObjectName(_fromUtf8("bt69_2"))
+        self.btSubmitNumeric = QtGui.QPushButton(self.pgNumeric)
+        self.btSubmitNumeric.setGeometry(QtCore.QRect(384, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSubmitNumeric.setFont(font)
+        self.btSubmitNumeric.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSubmitNumeric.setText(_fromUtf8(""))
+        self.btSubmitNumeric.setIcon(icon2)
+        self.btSubmitNumeric.setIconSize(QtCore.QSize(35, 35))
+        self.btSubmitNumeric.setObjectName(_fromUtf8("btSubmitNumeric"))
+        self.btSpaceNumeric = QtGui.QPushButton(self.pgNumeric)
+        self.btSpaceNumeric.setGeometry(QtCore.QRect(384, 60, 96, 61))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSpaceNumeric.setFont(font)
+        self.btSpaceNumeric.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSpaceNumeric.setObjectName(_fromUtf8("btSpaceNumeric"))
+        self.btBackspaceNumeric = QtGui.QPushButton(self.pgNumeric)
+        self.btBackspaceNumeric.setGeometry(QtCore.QRect(384, 0, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btBackspaceNumeric.setFont(font)
+        self.btBackspaceNumeric.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"border-bottom: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btBackspaceNumeric.setText(_fromUtf8(""))
+        self.btBackspaceNumeric.setIcon(icon1)
+        self.btBackspaceNumeric.setIconSize(QtCore.QSize(35, 35))
+        self.btBackspaceNumeric.setObjectName(_fromUtf8("btBackspaceNumeric"))
+        self.bt56_2 = QtGui.QPushButton(self.pgNumeric)
+        self.bt56_2.setGeometry(QtCore.QRect(384, 120, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt56_2.setFont(font)
+        self.bt56_2.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt56_2.setObjectName(_fromUtf8("bt56_2"))
+        self.pageHolder.addWidget(self.pgNumeric)
+        self.pgSpecial = QtGui.QWidget()
+        self.pgSpecial.setObjectName(_fromUtf8("pgSpecial"))
+        self.bt78 = QtGui.QPushButton(self.pgSpecial)
+        self.bt78.setGeometry(QtCore.QRect(48, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt78.setFont(font)
+        self.bt78.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt78.setObjectName(_fromUtf8("bt78"))
+        self.bt82 = QtGui.QPushButton(self.pgSpecial)
+        self.bt82.setGeometry(QtCore.QRect(240, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt82.setFont(font)
+        self.bt82.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt82.setObjectName(_fromUtf8("bt82"))
+        self.bt70 = QtGui.QPushButton(self.pgSpecial)
+        self.bt70.setGeometry(QtCore.QRect(144, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt70.setFont(font)
+        self.bt70.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt70.setObjectName(_fromUtf8("bt70"))
+        self.bt84 = QtGui.QPushButton(self.pgSpecial)
+        self.bt84.setGeometry(QtCore.QRect(192, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt84.setFont(font)
+        self.bt84.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt84.setObjectName(_fromUtf8("bt84"))
+        self.bt73 = QtGui.QPushButton(self.pgSpecial)
+        self.bt73.setGeometry(QtCore.QRect(288, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt73.setFont(font)
+        self.bt73.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt73.setObjectName(_fromUtf8("bt73"))
+        self.bt83 = QtGui.QPushButton(self.pgSpecial)
+        self.bt83.setGeometry(QtCore.QRect(288, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt83.setFont(font)
+        self.bt83.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt83.setObjectName(_fromUtf8("bt83"))
+        self.bt71 = QtGui.QPushButton(self.pgSpecial)
+        self.bt71.setGeometry(QtCore.QRect(336, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt71.setFont(font)
+        self.bt71.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt71.setObjectName(_fromUtf8("bt71"))
+        self.bt68 = QtGui.QPushButton(self.pgSpecial)
+        self.bt68.setGeometry(QtCore.QRect(48, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt68.setFont(font)
+        self.bt68.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt68.setObjectName(_fromUtf8("bt68"))
+        self.bt77 = QtGui.QPushButton(self.pgSpecial)
+        self.bt77.setGeometry(QtCore.QRect(0, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt77.setFont(font)
+        self.bt77.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt77.setObjectName(_fromUtf8("bt77"))
+        self.bt79 = QtGui.QPushButton(self.pgSpecial)
+        self.bt79.setGeometry(QtCore.QRect(96, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt79.setFont(font)
+        self.bt79.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt79.setObjectName(_fromUtf8("bt79"))
+        self.bt72 = QtGui.QPushButton(self.pgSpecial)
+        self.bt72.setGeometry(QtCore.QRect(384, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt72.setFont(font)
+        self.bt72.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt72.setObjectName(_fromUtf8("bt72"))
+        self.bt74 = QtGui.QPushButton(self.pgSpecial)
+        self.bt74.setGeometry(QtCore.QRect(336, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt74.setFont(font)
+        self.bt74.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt74.setObjectName(_fromUtf8("bt74"))
+        self.bt85 = QtGui.QPushButton(self.pgSpecial)
+        self.bt85.setGeometry(QtCore.QRect(240, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt85.setFont(font)
+        self.bt85.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt85.setObjectName(_fromUtf8("bt85"))
+        self.bt69 = QtGui.QPushButton(self.pgSpecial)
+        self.bt69.setGeometry(QtCore.QRect(96, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt69.setFont(font)
+        self.bt69.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt69.setObjectName(_fromUtf8("bt69"))
+        self.bt81 = QtGui.QPushButton(self.pgSpecial)
+        self.bt81.setGeometry(QtCore.QRect(192, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt81.setFont(font)
+        self.bt81.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt81.setObjectName(_fromUtf8("bt81"))
+        self.bt67 = QtGui.QPushButton(self.pgSpecial)
+        self.bt67.setGeometry(QtCore.QRect(0, 60, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt67.setFont(font)
+        self.bt67.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt67.setObjectName(_fromUtf8("bt67"))
+        self.bt80 = QtGui.QPushButton(self.pgSpecial)
+        self.bt80.setGeometry(QtCore.QRect(144, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt80.setFont(font)
+        self.bt80.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt80.setObjectName(_fromUtf8("bt80"))
+        self.bt76 = QtGui.QPushButton(self.pgSpecial)
+        self.bt76.setGeometry(QtCore.QRect(240, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt76.setFont(font)
+        self.bt76.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt76.setObjectName(_fromUtf8("bt76"))
+        self.bt75 = QtGui.QPushButton(self.pgSpecial)
+        self.bt75.setGeometry(QtCore.QRect(192, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt75.setFont(font)
+        self.bt75.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt75.setObjectName(_fromUtf8("bt75"))
+        self.bt86 = QtGui.QPushButton(self.pgSpecial)
+        self.bt86.setGeometry(QtCore.QRect(432, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt86.setFont(font)
+        self.bt86.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt86.setObjectName(_fromUtf8("bt86"))
+        self.bt90 = QtGui.QPushButton(self.pgSpecial)
+        self.bt90.setGeometry(QtCore.QRect(384, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt90.setFont(font)
+        self.bt90.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt90.setObjectName(_fromUtf8("bt90"))
+        self.bt91 = QtGui.QPushButton(self.pgSpecial)
+        self.bt91.setGeometry(QtCore.QRect(192, 180, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt91.setFont(font)
+        self.bt91.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt91.setObjectName(_fromUtf8("bt91"))
+        self.bt92 = QtGui.QPushButton(self.pgSpecial)
+        self.bt92.setGeometry(QtCore.QRect(240, 180, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt92.setFont(font)
+        self.bt92.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt92.setObjectName(_fromUtf8("bt92"))
+        self.bt93 = QtGui.QPushButton(self.pgSpecial)
+        self.bt93.setGeometry(QtCore.QRect(0, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt93.setFont(font)
+        self.bt93.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt93.setObjectName(_fromUtf8("bt93"))
+        self.bt87 = QtGui.QPushButton(self.pgSpecial)
+        self.bt87.setGeometry(QtCore.QRect(96, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt87.setFont(font)
+        self.bt87.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt87.setObjectName(_fromUtf8("bt87"))
+        self.bt88 = QtGui.QPushButton(self.pgSpecial)
+        self.bt88.setGeometry(QtCore.QRect(144, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt88.setFont(font)
+        self.bt88.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt88.setObjectName(_fromUtf8("bt88"))
+        self.bt89 = QtGui.QPushButton(self.pgSpecial)
+        self.bt89.setGeometry(QtCore.QRect(432, 120, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt89.setFont(font)
+        self.bt89.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt89.setObjectName(_fromUtf8("bt89"))
+        self.bt94 = QtGui.QPushButton(self.pgSpecial)
+        self.bt94.setGeometry(QtCore.QRect(48, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt94.setFont(font)
+        self.bt94.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt94.setObjectName(_fromUtf8("bt94"))
+        self.btBackSpecial = QtGui.QPushButton(self.pgSpecial)
+        self.btBackSpecial.setGeometry(QtCore.QRect(0, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btBackSpecial.setFont(font)
+        self.btBackSpecial.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btBackSpecial.setText(_fromUtf8(""))
+        self.btBackSpecial.setIcon(icon4)
+        self.btBackSpecial.setIconSize(QtCore.QSize(35, 35))
+        self.btBackSpecial.setObjectName(_fromUtf8("btBackSpecial"))
+        self.bt27_3 = QtGui.QPushButton(self.pgSpecial)
+        self.bt27_3.setGeometry(QtCore.QRect(288, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.bt27_3.setFont(font)
+        self.bt27_3.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top:none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt27_3.setObjectName(_fromUtf8("bt27_3"))
+        self.btBackspaceSpecial = QtGui.QPushButton(self.pgSpecial)
+        self.btBackspaceSpecial.setGeometry(QtCore.QRect(384, 60, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        self.btBackspaceSpecial.setFont(font)
+        self.btBackspaceSpecial.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btBackspaceSpecial.setText(_fromUtf8(""))
+        self.btBackspaceSpecial.setIcon(icon1)
+        self.btBackspaceSpecial.setIconSize(QtCore.QSize(25, 25))
+        self.btBackspaceSpecial.setObjectName(_fromUtf8("btBackspaceSpecial"))
+        self.btNumericSpecial = QtGui.QPushButton(self.pgSpecial)
+        self.btNumericSpecial.setGeometry(QtCore.QRect(96, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btNumericSpecial.setFont(font)
+        self.btNumericSpecial.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btNumericSpecial.setObjectName(_fromUtf8("btNumericSpecial"))
+        self.btSpaceSpecial = QtGui.QPushButton(self.pgSpecial)
+        self.btSpaceSpecial.setGeometry(QtCore.QRect(288, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSpaceSpecial.setFont(font)
+        self.btSpaceSpecial.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSpaceSpecial.setObjectName(_fromUtf8("btSpaceSpecial"))
+        self.bt56_3 = QtGui.QPushButton(self.pgSpecial)
+        self.bt56_3.setGeometry(QtCore.QRect(336, 0, 48, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.bt56_3.setFont(font)
+        self.bt56_3.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-right: none;\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.bt56_3.setObjectName(_fromUtf8("bt56_3"))
+        self.btSubmitSpecial = QtGui.QPushButton(self.pgSpecial)
+        self.btSubmitSpecial.setGeometry(QtCore.QRect(384, 180, 96, 60))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btSubmitSpecial.setFont(font)
+        self.btSubmitSpecial.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    border-top: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btSubmitSpecial.setText(_fromUtf8(""))
+        self.btSubmitSpecial.setIcon(icon2)
+        self.btSubmitSpecial.setIconSize(QtCore.QSize(35, 35))
+        self.btSubmitSpecial.setObjectName(_fromUtf8("btSubmitSpecial"))
+        self.bt92.raise_()
+        self.bt89.raise_()
+        self.bt85.raise_()
+        self.bt94.raise_()
+        self.bt83.raise_()
+        self.bt68.raise_()
+        self.bt72.raise_()
+        self.btNumericSpecial.raise_()
+        self.bt93.raise_()
+        self.bt79.raise_()
+        self.bt71.raise_()
+        self.bt56_3.raise_()
+        self.btBackspaceSpecial.raise_()
+        self.bt82.raise_()
+        self.bt80.raise_()
+        self.bt74.raise_()
+        self.bt75.raise_()
+        self.bt77.raise_()
+        self.bt91.raise_()
+        self.bt69.raise_()
+        self.bt90.raise_()
+        self.bt67.raise_()
+        self.bt81.raise_()
+        self.bt27_3.raise_()
+        self.bt76.raise_()
+        self.bt84.raise_()
+        self.bt70.raise_()
+        self.btBackSpecial.raise_()
+        self.btSpaceSpecial.raise_()
+        self.bt73.raise_()
+        self.bt88.raise_()
+        self.bt87.raise_()
+        self.bt78.raise_()
+        self.bt86.raise_()
+        self.btSubmitSpecial.raise_()
+        self.pageHolder.addWidget(self.pgSpecial)
+        self.btCursorLeft = QtGui.QPushButton(WinKeyboard)
+        self.btCursorLeft.setGeometry(QtCore.QRect(288, 0, 96, 81))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btCursorLeft.setFont(font)
+        self.btCursorLeft.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"border-right: none;\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btCursorLeft.setText(_fromUtf8(""))
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/arrows-4.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btCursorLeft.setIcon(icon5)
+        self.btCursorLeft.setIconSize(QtCore.QSize(45, 45))
+        self.btCursorLeft.setObjectName(_fromUtf8("btCursorLeft"))
+        self.btCursorRight = QtGui.QPushButton(WinKeyboard)
+        self.btCursorRight.setGeometry(QtCore.QRect(384, 0, 96, 81))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setWeight(50)
+        self.btCursorRight.setFont(font)
+        self.btCursorRight.setStyleSheet(_fromUtf8("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    \n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}"))
+        self.btCursorRight.setText(_fromUtf8(""))
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(_fromUtf8("templates/img/arrows-2.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btCursorRight.setIcon(icon6)
+        self.btCursorRight.setIconSize(QtCore.QSize(45, 45))
+        self.btCursorRight.setObjectName(_fromUtf8("btCursorRight"))
 
-        self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(1)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(WinKeyboard)
+        self.pageHolder.setCurrentIndex(3)
+        QtCore.QMetaObject.connectSlotsByName(WinKeyboard)
 
-    def retranslateUi(self, Form):
-        Form.setWindowTitle(_translate("Form", "Form", None))
-        self.textEdit.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+    def retranslateUi(self, WinKeyboard):
+        WinKeyboard.setWindowTitle(_translate("WinKeyboard", "Form", None))
+        self.tbDisplay.setHtml(_translate("WinKeyboard", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Gotham\'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">ENTER TEXT ...</span></p></body></html>", None))
-        self.Button1.setText(_translate("Form", "Q", None))
-        self.Button11.setText(_translate("Form", "A", None))
-        self.Button2.setText(_translate("Form", "W", None))
-        self.Button12.setText(_translate("Form", "S", None))
-        self.Button20.setText(_translate("Form", "Z", None))
-        self.Button3.setText(_translate("Form", "E", None))
-        self.Button13.setText(_translate("Form", "D", None))
-        self.Button21.setText(_translate("Form", "X", None))
-        self.Button4.setText(_translate("Form", "R", None))
-        self.Button14.setText(_translate("Form", "F", None))
-        self.Button22.setText(_translate("Form", "C", None))
-        self.Button5.setText(_translate("Form", "T", None))
-        self.Button15.setText(_translate("Form", "G", None))
-        self.Button23.setText(_translate("Form", "V", None))
-        self.Button6.setText(_translate("Form", "Y", None))
-        self.Button16.setText(_translate("Form", "H", None))
-        self.Button24.setText(_translate("Form", "B", None))
-        self.Button7.setText(_translate("Form", "U", None))
-        self.Button17.setText(_translate("Form", "J", None))
-        self.Button25.setText(_translate("Form", "N", None))
-        self.Button8.setText(_translate("Form", "I", None))
-        self.Button18.setText(_translate("Form", "K", None))
-        self.Button26.setText(_translate("Form", "M", None))
-        self.Button9.setText(_translate("Form", "O", None))
-        self.Button19.setText(_translate("Form", "L", None))
-        self.Button27.setText(_translate("Form", ".", None))
-        self.Button10.setText(_translate("Form", "P", None))
-        self.Button28.setText(_translate("Form", ",", None))
-        self.ButtonSpace.setText(_translate("Form", "Space", None))
-        self.ButtonNumeric.setText(_translate("Form", "123!@#", None))
-        self.ButtonEnter.setText(_translate("Form", "ENTER", None))
-        self.Button48.setText(_translate("Form", "z", None))
-        self.Button52.setText(_translate("Form", "b", None))
-        self.Button42.setText(_translate("Form", "f", None))
-        self.Button54.setText(_translate("Form", "m", None))
-        self.Button35.setText(_translate("Form", "u", None))
-        self.Button45.setText(_translate("Form", "j", None))
-        self.Button53.setText(_translate("Form", "n", None))
-        self.Button33.setText(_translate("Form", "t", None))
-        self.Button43.setText(_translate("Form", "g", None))
-        self.Button40.setText(_translate("Form", "s", None))
-        self.Button29.setText(_translate("Form", "q", None))
-        self.Button30.setText(_translate("Form", "w", None))
-        self.Button38.setText(_translate("Form", "p", None))
-        self.Button49.setText(_translate("Form", "x", None))
-        self.Button31.setText(_translate("Form", "e", None))
-        self.Button32.setText(_translate("Form", "r", None))
-        self.Button44.setText(_translate("Form", "h", None))
-        self.Button37.setText(_translate("Form", "o", None))
-        self.Button46.setText(_translate("Form", "k", None))
-        self.Button55.setText(_translate("Form", ".", None))
-        self.Button41.setText(_translate("Form", "d", None))
-        self.Button51.setText(_translate("Form", "v", None))
-        self.Button36.setText(_translate("Form", "i", None))
-        self.Button39.setText(_translate("Form", "a", None))
-        self.Button50.setText(_translate("Form", "c", None))
-        self.Button34.setText(_translate("Form", "y", None))
-        self.Button47.setText(_translate("Form", "l", None))
-        self.Button56.setText(_translate("Form", ",", None))
-        self.ButtonSpace2.setText(_translate("Form", "Space", None))
-        self.ButtonNumeric2.setText(_translate("Form", "123!@#", None))
-        self.ButtonEnter2.setText(_translate("Form", "ENTER", None))
-        self.Button78.setText(_translate("Form", "_", None))
-        self.Button82.setText(_translate("Form", ">", None))
-        self.Button70.setText(_translate("Form", "$", None))
-        self.Button84.setText(_translate("Form", "{", None))
-        self.Button63.setText(_translate("Form", "7", None))
-        self.Button73.setText(_translate("Form", "&&", None))
-        self.Button83.setText(_translate("Form", "?", None))
-        self.Button61.setText(_translate("Form", "5", None))
-        self.Button71.setText(_translate("Form", "%", None))
-        self.Button68.setText(_translate("Form", "@", None))
-        self.Button57.setText(_translate("Form", "1", None))
-        self.Button58.setText(_translate("Form", "2", None))
-        self.Button66.setText(_translate("Form", "0", None))
-        self.Button77.setText(_translate("Form", "-", None))
-        self.Button79.setText(_translate("Form", "+", None))
-        self.Button59.setText(_translate("Form", "3", None))
-        self.Button60.setText(_translate("Form", "4", None))
-        self.Button72.setText(_translate("Form", "^", None))
-        self.Button65.setText(_translate("Form", "9", None))
-        self.Button74.setText(_translate("Form", "*", None))
-        self.Button85.setText(_translate("Form", "}", None))
-        self.Button69.setText(_translate("Form", "#", None))
-        self.Button81.setText(_translate("Form", "<", None))
-        self.Button64.setText(_translate("Form", "8", None))
-        self.Button67.setText(_translate("Form", "!", None))
-        self.Button80.setText(_translate("Form", "=", None))
-        self.Button76.setText(_translate("Form", ")", None))
-        self.Button62.setText(_translate("Form", "6", None))
-        self.Button75.setText(_translate("Form", "(", None))
-        self.Button86.setText(_translate("Form", "/", None))
-        self.Button90.setText(_translate("Form", "\\", None))
-        self.Button91.setText(_translate("Form", "[", None))
-        self.Button92.setText(_translate("Form", "]", None))
-        self.Button93.setText(_translate("Form", "\"", None))
-        self.Button87.setText(_translate("Form", ";", None))
-        self.Button88.setText(_translate("Form", ":", None))
-        self.Button89.setText(_translate("Form", "|", None))
-        self.Button94.setText(_translate("Form", "\'", None))
+        self.bt48.setText(_translate("WinKeyboard", "z", None))
+        self.bt52.setText(_translate("WinKeyboard", "b", None))
+        self.bt42.setText(_translate("WinKeyboard", "f", None))
+        self.bt54.setText(_translate("WinKeyboard", "m", None))
+        self.bt35.setText(_translate("WinKeyboard", "u", None))
+        self.bt45.setText(_translate("WinKeyboard", "j", None))
+        self.bt53.setText(_translate("WinKeyboard", "n", None))
+        self.bt33.setText(_translate("WinKeyboard", "t", None))
+        self.bt43.setText(_translate("WinKeyboard", "g", None))
+        self.bt40.setText(_translate("WinKeyboard", "s", None))
+        self.bt29.setText(_translate("WinKeyboard", "q", None))
+        self.bt30.setText(_translate("WinKeyboard", "w", None))
+        self.bt38.setText(_translate("WinKeyboard", "p", None))
+        self.bt49.setText(_translate("WinKeyboard", "x", None))
+        self.bt31.setText(_translate("WinKeyboard", "e", None))
+        self.bt32.setText(_translate("WinKeyboard", "r", None))
+        self.bt44.setText(_translate("WinKeyboard", "h", None))
+        self.bt37.setText(_translate("WinKeyboard", "o", None))
+        self.bt46.setText(_translate("WinKeyboard", "k", None))
+        self.bt55.setText(_translate("WinKeyboard", ".", None))
+        self.bt41.setText(_translate("WinKeyboard", "d", None))
+        self.bt51.setText(_translate("WinKeyboard", "v", None))
+        self.bt36.setText(_translate("WinKeyboard", "i", None))
+        self.bt39.setText(_translate("WinKeyboard", "a", None))
+        self.bt50.setText(_translate("WinKeyboard", "c", None))
+        self.bt34.setText(_translate("WinKeyboard", "y", None))
+        self.bt47.setText(_translate("WinKeyboard", "l", None))
+        self.bt56.setText(_translate("WinKeyboard", ",", None))
+        self.btSpaceAlpha.setText(_translate("WinKeyboard", "Space", None))
+        self.btNumericAlpha.setText(_translate("WinKeyboard", "123", None))
+        self.btSpecialAlpha.setText(_translate("WinKeyboard", "@#!", None))
+        self.bt1.setText(_translate("WinKeyboard", "Q", None))
+        self.bt11.setText(_translate("WinKeyboard", "A", None))
+        self.bt2.setText(_translate("WinKeyboard", "W", None))
+        self.bt12.setText(_translate("WinKeyboard", "S", None))
+        self.bt20.setText(_translate("WinKeyboard", "Z", None))
+        self.bt3.setText(_translate("WinKeyboard", "E", None))
+        self.bt13.setText(_translate("WinKeyboard", "D", None))
+        self.bt21.setText(_translate("WinKeyboard", "X", None))
+        self.bt4.setText(_translate("WinKeyboard", "R", None))
+        self.bt14.setText(_translate("WinKeyboard", "F", None))
+        self.bt22.setText(_translate("WinKeyboard", "C", None))
+        self.bt5.setText(_translate("WinKeyboard", "T", None))
+        self.bt15.setText(_translate("WinKeyboard", "G", None))
+        self.bt23.setText(_translate("WinKeyboard", "V", None))
+        self.bt6.setText(_translate("WinKeyboard", "Y", None))
+        self.bt16.setText(_translate("WinKeyboard", "H", None))
+        self.bt24.setText(_translate("WinKeyboard", "B", None))
+        self.bt7.setText(_translate("WinKeyboard", "U", None))
+        self.bt17.setText(_translate("WinKeyboard", "J", None))
+        self.bt25.setText(_translate("WinKeyboard", "N", None))
+        self.bt8.setText(_translate("WinKeyboard", "I", None))
+        self.bt18.setText(_translate("WinKeyboard", "K", None))
+        self.bt26.setText(_translate("WinKeyboard", "M", None))
+        self.bt9.setText(_translate("WinKeyboard", "O", None))
+        self.bt19.setText(_translate("WinKeyboard", "L", None))
+        self.bt27.setText(_translate("WinKeyboard", ".", None))
+        self.bt10.setText(_translate("WinKeyboard", "P", None))
+        self.bt28.setText(_translate("WinKeyboard", ",", None))
+        self.btSpecialAlphaU.setText(_translate("WinKeyboard", "@#!", None))
+        self.btSpaceAlphaU.setText(_translate("WinKeyboard", "Space", None))
+        self.btNumericAlphaU.setText(_translate("WinKeyboard", "123", None))
+        self.bt58.setText(_translate("WinKeyboard", "2", None))
+        self.bt57.setText(_translate("WinKeyboard", "1", None))
+        self.bt65.setText(_translate("WinKeyboard", "9", None))
+        self.bt62.setText(_translate("WinKeyboard", "6", None))
+        self.bt63.setText(_translate("WinKeyboard", "7", None))
+        self.bt61.setText(_translate("WinKeyboard", "5", None))
+        self.bt59.setText(_translate("WinKeyboard", "3", None))
+        self.bt64.setText(_translate("WinKeyboard", "8", None))
+        self.bt66.setText(_translate("WinKeyboard", "0", None))
+        self.bt60.setText(_translate("WinKeyboard", "4", None))
+        self.bt27_2.setText(_translate("WinKeyboard", ".", None))
+        self.btSpecialNumeric.setText(_translate("WinKeyboard", "@#!", None))
+        self.bt74_2.setText(_translate("WinKeyboard", "*", None))
+        self.bt79_2.setText(_translate("WinKeyboard", "+", None))
+        self.bt69_2.setText(_translate("WinKeyboard", "#", None))
+        self.btSpaceNumeric.setText(_translate("WinKeyboard", "Space", None))
+        self.bt56_2.setText(_translate("WinKeyboard", ",", None))
+        self.bt78.setText(_translate("WinKeyboard", "_", None))
+        self.bt82.setText(_translate("WinKeyboard", ">", None))
+        self.bt70.setText(_translate("WinKeyboard", "$", None))
+        self.bt84.setText(_translate("WinKeyboard", "{", None))
+        self.bt73.setText(_translate("WinKeyboard", "&&", None))
+        self.bt83.setText(_translate("WinKeyboard", "?", None))
+        self.bt71.setText(_translate("WinKeyboard", "%", None))
+        self.bt68.setText(_translate("WinKeyboard", "@", None))
+        self.bt77.setText(_translate("WinKeyboard", "-", None))
+        self.bt79.setText(_translate("WinKeyboard", "+", None))
+        self.bt72.setText(_translate("WinKeyboard", "^", None))
+        self.bt74.setText(_translate("WinKeyboard", "*", None))
+        self.bt85.setText(_translate("WinKeyboard", "}", None))
+        self.bt69.setText(_translate("WinKeyboard", "#", None))
+        self.bt81.setText(_translate("WinKeyboard", "<", None))
+        self.bt67.setText(_translate("WinKeyboard", "!", None))
+        self.bt80.setText(_translate("WinKeyboard", "=", None))
+        self.bt76.setText(_translate("WinKeyboard", ")", None))
+        self.bt75.setText(_translate("WinKeyboard", "(", None))
+        self.bt86.setText(_translate("WinKeyboard", "/", None))
+        self.bt90.setText(_translate("WinKeyboard", "\\", None))
+        self.bt91.setText(_translate("WinKeyboard", "[", None))
+        self.bt92.setText(_translate("WinKeyboard", "]", None))
+        self.bt93.setText(_translate("WinKeyboard", "\"", None))
+        self.bt87.setText(_translate("WinKeyboard", ";", None))
+        self.bt88.setText(_translate("WinKeyboard", ":", None))
+        self.bt89.setText(_translate("WinKeyboard", "|", None))
+        self.bt94.setText(_translate("WinKeyboard", "\'", None))
+        self.bt27_3.setText(_translate("WinKeyboard", ".", None))
+        self.btNumericSpecial.setText(_translate("WinKeyboard", "123", None))
+        self.btSpaceSpecial.setText(_translate("WinKeyboard", "Space", None))
+        self.bt56_3.setText(_translate("WinKeyboard", ",", None))
 
