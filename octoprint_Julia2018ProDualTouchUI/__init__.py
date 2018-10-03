@@ -74,7 +74,7 @@ class Julia2018ProDualTouchUI(octoprint.plugin.StartupPlugin):
 
 
 __plugin_name__ = "Julia2018ProDualTouchUI"
-__plugin_version__ = "0.0.13"
+__plugin_version__ = "0.0.14"
 
 
 def __plugin_load__():
