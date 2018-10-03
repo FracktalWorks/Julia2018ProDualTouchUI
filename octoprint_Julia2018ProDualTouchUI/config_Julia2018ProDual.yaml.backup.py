@@ -43,6 +43,12 @@ feature:
 pluginmanager:
   repository: http://plugins.octoprint.org/plugins.json
 plugins:
+  Julia2018FilamentSensor:
+    mode: '1'
+    pin: '5'
+    pin2: '6'
+    switch: '0'
+    switch2: '0'
   _disabled:
   - cura
   announcements:
@@ -87,7 +93,7 @@ printerProfiles:
     heatedBed: true
     id: _default
     model: Generic RepRap Printer
-    name: Julia 2018 Pro Single
+    name: Julia 2018 Pro Dual
     volume:
       custom_box: false
       depth: 400.0

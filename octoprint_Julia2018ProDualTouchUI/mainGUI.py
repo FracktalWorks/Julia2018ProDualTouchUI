@@ -197,9 +197,9 @@ class Ui_MainWindow(object):
         self.tool0Label.setScaledContents(True)
         self.tool0Label.setObjectName(_fromUtf8("tool0Label"))
         self.FileNameLabel = QtGui.QLabel(self.homePage)
-        self.FileNameLabel.setGeometry(QtCore.QRect(0, 170, 70, 21))
+        self.FileNameLabel.setGeometry(QtCore.QRect(0, 170, 61, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Light"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(14)
         font.setBold(False)
         font.setWeight(50)
@@ -207,9 +207,9 @@ class Ui_MainWindow(object):
         self.FileNameLabel.setStyleSheet(_fromUtf8("color: rgb(255, 255, 255);"))
         self.FileNameLabel.setObjectName(_fromUtf8("FileNameLabel"))
         self.printTimeLabel = QtGui.QLabel(self.homePage)
-        self.printTimeLabel.setGeometry(QtCore.QRect(0, 190, 111, 21))
+        self.printTimeLabel.setGeometry(QtCore.QRect(0, 190, 121, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Light"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(14)
         font.setBold(False)
         font.setWeight(50)
@@ -217,9 +217,9 @@ class Ui_MainWindow(object):
         self.printTimeLabel.setStyleSheet(_fromUtf8("color: rgb(255, 255, 255);"))
         self.printTimeLabel.setObjectName(_fromUtf8("printTimeLabel"))
         self.fileName = QtGui.QLabel(self.homePage)
-        self.fileName.setGeometry(QtCore.QRect(40, 170, 211, 21))
+        self.fileName.setGeometry(QtCore.QRect(45, 170, 201, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(14)
         self.fileName.setFont(font)
         self.fileName.setStyleSheet(_fromUtf8("color: rgb(255, 255, 255);\n"
@@ -228,18 +228,18 @@ class Ui_MainWindow(object):
         self.fileName.setWordWrap(False)
         self.fileName.setObjectName(_fromUtf8("fileName"))
         self.printTime = QtGui.QLabel(self.homePage)
-        self.printTime.setGeometry(QtCore.QRect(100, 190, 181, 21))
+        self.printTime.setGeometry(QtCore.QRect(115, 190, 171, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(14)
         self.printTime.setFont(font)
         self.printTime.setStyleSheet(_fromUtf8("color: rgb(255, 255, 255);\n"
 "background-color: rgba(255, 255, 255, 0);"))
         self.printTime.setObjectName(_fromUtf8("printTime"))
         self.timeLeftLabel = QtGui.QLabel(self.homePage)
-        self.timeLeftLabel.setGeometry(QtCore.QRect(0, 210, 181, 21))
+        self.timeLeftLabel.setGeometry(QtCore.QRect(0, 210, 111, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Light"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(14)
         font.setBold(False)
         font.setWeight(50)
@@ -282,10 +282,10 @@ class Ui_MainWindow(object):
         self.bedLabel.setScaledContents(True)
         self.bedLabel.setObjectName(_fromUtf8("bedLabel"))
         self.tool0TargetTemperature = QtGui.QLabel(self.homePage)
-        self.tool0TargetTemperature.setGeometry(QtCore.QRect(10, 70, 70, 21))
+        self.tool0TargetTemperature.setGeometry(QtCore.QRect(5, 70, 41, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(9)
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(11)
         font.setBold(False)
         font.setUnderline(False)
         font.setWeight(50)
@@ -294,6 +294,7 @@ class Ui_MainWindow(object):
         self.tool0TargetTemperature.setStyleSheet(_fromUtf8("\n"
 "   color:  white;\n"
 "background-color: rgba(255, 255, 255, 0);"))
+        self.tool0TargetTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.tool0TargetTemperature.setObjectName(_fromUtf8("tool0TargetTemperature"))
         self.tool0TempBar = QtGui.QProgressBar(self.homePage)
         self.tool0TempBar.setGeometry(QtCore.QRect(60, 80, 16, 71))
@@ -314,9 +315,9 @@ class Ui_MainWindow(object):
         self.tool0TempBar.setOrientation(QtCore.Qt.Vertical)
         self.tool0TempBar.setObjectName(_fromUtf8("tool0TempBar"))
         self.tool0ActualTemperature = QtGui.QLabel(self.homePage)
-        self.tool0ActualTemperature.setGeometry(QtCore.QRect(5, 140, 71, 18))
+        self.tool0ActualTemperature.setGeometry(QtCore.QRect(5, 140, 41, 18))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(11)
         font.setBold(False)
         font.setUnderline(False)
@@ -326,11 +327,12 @@ class Ui_MainWindow(object):
         self.tool0ActualTemperature.setStyleSheet(_fromUtf8("\n"
 "   color:  white;\n"
 "background-color: rgba(0, 0, 0, 0);"))
+        self.tool0ActualTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.tool0ActualTemperature.setObjectName(_fromUtf8("tool0ActualTemperature"))
         self.bedActualTemperatute = QtGui.QLabel(self.homePage)
-        self.bedActualTemperatute.setGeometry(QtCore.QRect(180, 140, 70, 21))
+        self.bedActualTemperatute.setGeometry(QtCore.QRect(180, 140, 41, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(11)
         font.setBold(False)
         font.setUnderline(False)
@@ -340,12 +342,13 @@ class Ui_MainWindow(object):
         self.bedActualTemperatute.setStyleSheet(_fromUtf8("\n"
 "   color:  white;\n"
 "background-color: rgba(0, 0, 0, 0);"))
+        self.bedActualTemperatute.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.bedActualTemperatute.setObjectName(_fromUtf8("bedActualTemperatute"))
         self.bedTargetTemperature = QtGui.QLabel(self.homePage)
-        self.bedTargetTemperature.setGeometry(QtCore.QRect(180, 70, 70, 21))
+        self.bedTargetTemperature.setGeometry(QtCore.QRect(180, 70, 41, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(9)
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(11)
         font.setBold(False)
         font.setUnderline(False)
         font.setWeight(50)
@@ -354,6 +357,7 @@ class Ui_MainWindow(object):
         self.bedTargetTemperature.setStyleSheet(_fromUtf8("\n"
 "   color:  white;\n"
 "background-color: rgba(255, 255, 255, 0);"))
+        self.bedTargetTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.bedTargetTemperature.setObjectName(_fromUtf8("bedTargetTemperature"))
         self.menuButton = QtGui.QPushButton(self.homePage)
         self.menuButton.setGeometry(QtCore.QRect(0, 240, 111, 61))
@@ -426,9 +430,9 @@ class Ui_MainWindow(object):
         self.printProgressBar.setOrientation(QtCore.Qt.Horizontal)
         self.printProgressBar.setObjectName(_fromUtf8("printProgressBar"))
         self.timeLeft = QtGui.QLabel(self.homePage)
-        self.timeLeft.setGeometry(QtCore.QRect(100, 210, 181, 21))
+        self.timeLeft.setGeometry(QtCore.QRect(103, 210, 181, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(14)
         self.timeLeft.setFont(font)
         self.timeLeft.setStyleSheet(_fromUtf8("color: rgb(255, 255, 255);\n"
@@ -521,10 +525,10 @@ class Ui_MainWindow(object):
 "background-color: rgba(255, 255, 255, 0);"))
         self.celciusLabel.setObjectName(_fromUtf8("celciusLabel"))
         self.tool1TargetTemperature = QtGui.QLabel(self.homePage)
-        self.tool1TargetTemperature.setGeometry(QtCore.QRect(95, 70, 70, 21))
+        self.tool1TargetTemperature.setGeometry(QtCore.QRect(90, 70, 41, 21))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
-        font.setPointSize(9)
+        font.setFamily(_fromUtf8("Gotham"))
+        font.setPointSize(11)
         font.setBold(False)
         font.setUnderline(False)
         font.setWeight(50)
@@ -533,6 +537,7 @@ class Ui_MainWindow(object):
         self.tool1TargetTemperature.setStyleSheet(_fromUtf8("\n"
 "   color:  white;\n"
 "background-color: rgba(255, 255, 255, 0);"))
+        self.tool1TargetTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.tool1TargetTemperature.setObjectName(_fromUtf8("tool1TargetTemperature"))
         self.tool1Label = QtGui.QLabel(self.homePage)
         self.tool1Label.setGeometry(QtCore.QRect(95, 98, 31, 31))
@@ -569,9 +574,9 @@ class Ui_MainWindow(object):
         self.tool1TempBar.setOrientation(QtCore.Qt.Vertical)
         self.tool1TempBar.setObjectName(_fromUtf8("tool1TempBar"))
         self.tool1ActualTemperature = QtGui.QLabel(self.homePage)
-        self.tool1ActualTemperature.setGeometry(QtCore.QRect(90, 140, 71, 18))
+        self.tool1ActualTemperature.setGeometry(QtCore.QRect(90, 140, 41, 18))
         font = QtGui.QFont()
-        font.setFamily(_fromUtf8("Gotham Medium"))
+        font.setFamily(_fromUtf8("Gotham"))
         font.setPointSize(11)
         font.setBold(False)
         font.setUnderline(False)
@@ -581,6 +586,7 @@ class Ui_MainWindow(object):
         self.tool1ActualTemperature.setStyleSheet(_fromUtf8("\n"
 "   color:  white;\n"
 "background-color: rgba(0, 0, 0, 0);"))
+        self.tool1ActualTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.tool1ActualTemperature.setObjectName(_fromUtf8("tool1ActualTemperature"))
         self.statusBar = QtGui.QLabel(self.homePage)
         self.statusBar.setGeometry(QtCore.QRect(0, 0, 481, 51))
@@ -601,6 +607,7 @@ class Ui_MainWindow(object):
         self.printPreviewMain.setPixmap(QtGui.QPixmap(_fromUtf8("templates/img/thumbnail.png")))
         self.printPreviewMain.setScaledContents(True)
         self.printPreviewMain.setObjectName(_fromUtf8("printPreviewMain"))
+        self.timeLeftLabel.raise_()
         self.printPreviewMain.raise_()
         self.line.raise_()
         self.statusBar.raise_()
@@ -609,9 +616,7 @@ class Ui_MainWindow(object):
         self.tool0Label.raise_()
         self.FileNameLabel.raise_()
         self.printTimeLabel.raise_()
-        self.fileName.raise_()
         self.printTime.raise_()
-        self.timeLeftLabel.raise_()
         self.bedTempBar.raise_()
         self.bedLabel.raise_()
         self.tool0TempBar.raise_()
@@ -630,6 +635,7 @@ class Ui_MainWindow(object):
         self.tool1Label.raise_()
         self.tool1TempBar.raise_()
         self.tool1ActualTemperature.raise_()
+        self.fileName.raise_()
         self.stackedWidget.addWidget(self.homePage)
         self.MenuPage = QtGui.QWidget()
         self.MenuPage.setObjectName(_fromUtf8("MenuPage"))
@@ -891,7 +897,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName(_fromUtf8("scrollArea"))
         self.scrollAreaWidgetContents = QtGui.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 398, 700))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 478, 700))
         self.scrollAreaWidgetContents.setObjectName(_fromUtf8("scrollAreaWidgetContents"))
         self.verticalLayout = QtGui.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setContentsMargins(0, 0, 3, 0)
@@ -5153,7 +5159,7 @@ class Ui_MainWindow(object):
 "    padding: 2px;\n"
 "}\n"
 "\n"
-"QpinBox::down-arrow { \n"
+"QSpinBox::down-arrow { \n"
 "image: url(./templates/img/arrows-5.png);\n"
 "    width: 40px;\n"
 "    height: 40px;\n"
@@ -5471,7 +5477,8 @@ class Ui_MainWindow(object):
 "    padding: 2px;\n"
 "}\n"
 "\n"
-"QSpinBox::up-arrow { image: url(./templates/img/arrows.png);\n"
+"QSpinBox::up-arrow { \n"
+"image: url(./templates/img/arrows.png);\n"
 "    width: 40px;\n"
 "     height: 40px;\n"
 "padding: 5px; }\n"
@@ -5493,7 +5500,8 @@ class Ui_MainWindow(object):
 "    padding: 2px;\n"
 "}\n"
 "\n"
-"QSpinBox::down-arrow {image: url(./templates/img/arrows-5.png);\n"
+"QSpinBox::down-arrow {\n"
+"image: url(./templates/img/arrows-5.png);\n"
 "    width: 40px;\n"
 "     height: 40px;\n"
 "padding: 5px;\n"
@@ -7128,8 +7136,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.mainApplication)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(10)
-        self.controlTabWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(30)
+        self.controlTabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

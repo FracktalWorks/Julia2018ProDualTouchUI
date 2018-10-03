@@ -279,6 +279,9 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
         self.sanityCheck.start()
         self.connect(self.sanityCheck, QtCore.SIGNAL('LOADED'), self.proceed)
         self.connect(self.sanityCheck, QtCore.SIGNAL('STARTUP_ERROR'), self.shutdown)
+        
+        print(self.fileName.font().family())
+        print(self.fileName.font().defaultFamily())
 
         # Thread to get the get the state of the Printer as well as the temperature
 
@@ -422,8 +425,8 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
         self.moveYMButton.pressed.connect(lambda: octopiclient.jog(y=-self.step))
         self.moveXMButton.pressed.connect(lambda: octopiclient.jog(x=-self.step))
         self.moveXPButton.pressed.connect(lambda: octopiclient.jog(x=self.step))
-        self.moveZPButton.pressed.connect(lambda: octopiclient.jog(z=self.step))
-        self.moveZMButton.pressed.connect(lambda: octopiclient.jog(z=-self.step))
+        self.moveZPButton.pressed.connect(lambda: octopiclient.jog(z=self.step, speed=1000))
+        self.moveZMButton.pressed.connect(lambda: octopiclient.jog(z=-self.step, speed=1000))
         self.extruderButton.pressed.connect(lambda: octopiclient.extrude(self.step))
         self.retractButton.pressed.connect(lambda: octopiclient.extrude(-self.step))
         self.motorOffButton.pressed.connect(lambda: octopiclient.gcode(command='M18'))
@@ -469,8 +472,8 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
         self.restartButton.pressed.connect(self.reboot)
         self.restoreFactoryDefaultsButton.pressed.connect(self.areYouSureFactoryDefaultsMessageBox)
         self.restorePrintSettingsButton.pressed.connect(self.areYouSurerestorePrintSettingsMessageBox)
-        self.moveZPBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z0.25'))
-        self.moveZMBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z-0.25'))
+        self.moveZPBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z0.025'))
+        self.moveZMBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z-0.025'))
         
         # Network settings page
         self.networkInfoButton.pressed.connect(self.networkInfo)
@@ -578,10 +581,27 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
 
     ''' +++++++++++++++++++++++++Filament Sensor++++++++++++++++++++++++++++++++++++++ '''
 
-    def filamentSensorTriggeredMessageBox(self):
+    def filamentSensorTriggeredMessageBox(self, data):
         '''
         Displays a message box alerting the user of a filament error
         '''
+        # print(data)
+        filament = data["filament"] == "0"
+        filament2 = data["filament2"] == "0"
+        
+        if not filament and not filament2:
+            return
+        # print("1")
+        
+        msg = False
+        if filament:
+            msg = "Tool 0 and Tool 1" if filament2 else "Tool 0"
+        else:
+            msg = "Tool 1" if filament2 else False
+            
+        if not msg:
+            return
+        # print("2")
         self.activeExtruderPrint = self.activeExtruder
         choice = QtGui.QMessageBox()
         choice.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -594,7 +614,7 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
         font.setWeight(50)
         font.setStrikeOut(False)
         choice.setFont(font)
-        choice.setText("Filament Error detected on tool " + str(self.activeExtruder))
+        choice.setText("Filament runout detected on " + str(msg))
         choice.setIconPixmap(QtGui.QPixmap(_fromUtf8("templates/img/exclamation-mark.png")))
         # choice.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
         # choice.setFixedSize(QtCore.QSize(400, 300))
@@ -621,6 +641,7 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
         retval = choice.exec_()
         if retval == QtGui.QMessageBox.Ok:
             pass
+    
 
     def toggleFilamentSensor(self):
         self.filamentSensorToggleButton.setText(
@@ -1531,8 +1552,8 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
         else:
             self.tool0TempBar.setMaximum(temperature['tool0Actual'])
         self.tool0TempBar.setValue(temperature['tool0Actual'])
-        self.tool0ActualTemperature.setText(str(temperature['tool0Actual']))  # + unichr(176)
-        self.tool0TargetTemperature.setText(str(temperature['tool0Target']))
+        self.tool0ActualTemperature.setText(str(int(temperature['tool0Actual'])))  # + unichr(176)
+        self.tool0TargetTemperature.setText(str(int(temperature['tool0Target'])))
 
         if temperature['tool1Target'] == 0:
             self.tool1TempBar.setMaximum(300)
@@ -1563,8 +1584,8 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
         else:
             self.tool1TempBar.setMaximum(temperature['tool1Actual'])
         self.tool1TempBar.setValue(temperature['tool1Actual'])
-        self.tool1ActualTemperature.setText(str(temperature['tool1Actual']))  # + unichr(176)
-        self.tool1TargetTemperature.setText(str(temperature['tool1Target']))
+        self.tool1ActualTemperature.setText(str(int(temperature['tool1Actual'])))  # + unichr(176)
+        self.tool1TargetTemperature.setText(str(int(temperature['tool1Target'])))
 
         if temperature['bedTarget'] == 0:
             self.bedTempBar.setMaximum(150)
@@ -1595,8 +1616,8 @@ class MainUiClass(QtGui.QMainWindow, mainGUI.Ui_MainWindow):
         else:
             self.bedTempBar.setMaximum(temperature['bedActual'])
         self.bedTempBar.setValue(temperature['bedActual'])
-        self.bedActualTemperatute.setText(str(temperature['bedActual']))  # + unichr(176))
-        self.bedTargetTemperature.setText(str(temperature['bedTarget']))  # + unichr(176))
+        self.bedActualTemperatute.setText(str(int(temperature['bedActual'])))  # + unichr(176))
+        self.bedTargetTemperature.setText(str(int(temperature['bedTarget'])))  # + unichr(176))
 
         # updates the progress bar on the change filament screen
         if self.changeFilamentHeatingFlag:
@@ -2365,9 +2386,10 @@ class QtWebsocket(QtCore.QThread):
             if data["event"]["type"] == "Connected":
                 self.emit(QtCore.SIGNAL('CONNECTED'))
         if "plugin" in data:
-            if data["plugin"]["plugin"] == 'Julia3GFilamentSensor':
-                if data["plugin"]["data"]["status_value"] == 'error':
-                    self.emit(QtCore.SIGNAL('FILAMENT_SENSOR_TRIGGERED'))
+            # if data["plugin"]["plugin"] == 'Julia3GFilamentSensor':
+            if data["plugin"]["plugin"] == 'Julia2018FilamentSensor':
+                # if data["plugin"]["data"]["status_value"] == 'error':
+                self.emit(QtCore.SIGNAL('FILAMENT_SENSOR_TRIGGERED'), data["plugin"]["data"])
 
             elif data["plugin"]["plugin"] == 'softwareupdate':
                 if data["plugin"]["data"]["type"] == "updating":
