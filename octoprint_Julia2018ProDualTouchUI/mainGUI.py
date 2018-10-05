@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'NewUI.ui'
+# Form implementation generated from reading ui file '.\NewUI.ui'
 #
 # Created by: PyQt4 UI code generator 4.11.4
 #
@@ -897,7 +897,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName(_fromUtf8("scrollArea"))
         self.scrollAreaWidgetContents = QtGui.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 478, 700))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 398, 700))
         self.scrollAreaWidgetContents.setObjectName(_fromUtf8("scrollAreaWidgetContents"))
         self.verticalLayout = QtGui.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setContentsMargins(0, 0, 3, 0)
@@ -2912,9 +2912,9 @@ class Ui_MainWindow(object):
         self.toolOffsetXDoubleSpinBox.setButtonSymbols(QtGui.QAbstractSpinBox.UpDownArrows)
         self.toolOffsetXDoubleSpinBox.setAccelerated(True)
         self.toolOffsetXDoubleSpinBox.setDecimals(2)
-        self.toolOffsetXDoubleSpinBox.setMinimum(34.05)
-        self.toolOffsetXDoubleSpinBox.setMaximum(38.05)
-        self.toolOffsetXDoubleSpinBox.setSingleStep(0.05)
+        self.toolOffsetXDoubleSpinBox.setMinimum(32.0)
+        self.toolOffsetXDoubleSpinBox.setMaximum(40.0)
+        self.toolOffsetXDoubleSpinBox.setSingleStep(0.025)
         self.toolOffsetXDoubleSpinBox.setProperty("value", 36.05)
         self.toolOffsetXDoubleSpinBox.setObjectName(_fromUtf8("toolOffsetXDoubleSpinBox"))
         self.toolOffsetXSetButton = QtGui.QPushButton(self.toolOffsetXYPage)
@@ -3053,9 +3053,9 @@ class Ui_MainWindow(object):
         self.toolOffsetYDoubleSpinBox.setButtonSymbols(QtGui.QAbstractSpinBox.UpDownArrows)
         self.toolOffsetYDoubleSpinBox.setAccelerated(True)
         self.toolOffsetYDoubleSpinBox.setDecimals(2)
-        self.toolOffsetYDoubleSpinBox.setMinimum(-2.0)
-        self.toolOffsetYDoubleSpinBox.setMaximum(2.0)
-        self.toolOffsetYDoubleSpinBox.setSingleStep(0.05)
+        self.toolOffsetYDoubleSpinBox.setMinimum(-4.0)
+        self.toolOffsetYDoubleSpinBox.setMaximum(4.0)
+        self.toolOffsetYDoubleSpinBox.setSingleStep(0.025)
         self.toolOffsetYDoubleSpinBox.setObjectName(_fromUtf8("toolOffsetYDoubleSpinBox"))
         self.toolOffsetYLabel = QtGui.QLabel(self.toolOffsetXYPage)
         self.toolOffsetYLabel.setGeometry(QtCore.QRect(90, 180, 70, 21))
@@ -7136,7 +7136,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.mainApplication)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(30)
+        self.stackedWidget.setCurrentIndex(0)
         self.controlTabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
