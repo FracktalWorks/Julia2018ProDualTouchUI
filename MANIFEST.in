@@ -1,1 +1,3 @@
 include README.md
+recursive-include octoprint_Julia2018ProDualTouchUI/templates *
+recursive-include octoprint_Julia2018ProDualTouchUI/config *

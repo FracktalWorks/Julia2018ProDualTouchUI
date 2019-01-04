@@ -2,7 +2,7 @@ api:
   enabled: true
   key: B508534ED20348F090B4D0AD637D3660
 appearance:
-  name: Fracktal Works Julia 2018 Pro Dual
+  name: Julia Pro Dual
 devel:
   cache:
     enabled: true
@@ -43,12 +43,6 @@ feature:
 pluginmanager:
   repository: http://plugins.octoprint.org/plugins.json
 plugins:
-  Julia2018FilamentSensor:
-    mode: '1'
-    pin: '5'
-    pin2: '6'
-    switch: '0'
-    switch2: '0'
   _disabled:
   - cura
   announcements:
@@ -66,12 +60,8 @@ plugins:
     avrdude_programmer: wiring
     check_after_connect: false
     flash_method: avrdude
-  softwareupdate:
-    _config_version: 6
-    check_providers:
-      Julia2018ExtendedTouchUI: Julia2018ProDualTouchUI
-      firmwareupdater: firmwareupdater
 printerProfiles:
+  default: _default
   defaultProfile:
     axes:
       e:
@@ -90,15 +80,16 @@ printerProfiles:
     extruder:
       count: 2
       nozzleDiameter: 0.4
+      sharedNozzle: false
     heatedBed: true
     id: _default
-    model: Generic RepRap Printer
-    name: Julia 2018 Pro Dual
+    model: Fracktal Works Julia Pro Series
+    name: Julia Pro Dual
     volume:
       custom_box: false
-      depth: 400.0
+      depth: 395.0
       formFactor: rectangular
-      height: 400.0
+      height: 405.0
       origin: lowerleft
       width: 400.0
 serial:
