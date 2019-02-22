@@ -453,10 +453,10 @@ class MainUiClass(QtGui.QMainWindow, mainGUI_pro_dual.Ui_MainWindow):
         self.fileSelectedUSBPrintButton.pressed.connect(lambda: self.transferToLocal(prnt=True))
 
         # ControlScreen
-        self.moveYPButton.pressed.connect(lambda: octopiclient.jog(y=self.step))
-        self.moveYMButton.pressed.connect(lambda: octopiclient.jog(y=-self.step))
-        self.moveXMButton.pressed.connect(lambda: octopiclient.jog(x=-self.step))
-        self.moveXPButton.pressed.connect(lambda: octopiclient.jog(x=self.step))
+        self.moveYPButton.pressed.connect(lambda: octopiclient.jog(y=self.step, speed=1000))
+        self.moveYMButton.pressed.connect(lambda: octopiclient.jog(y=-self.step, speed=1000))
+        self.moveXMButton.pressed.connect(lambda: octopiclient.jog(x=-self.step, speed=1000))
+        self.moveXPButton.pressed.connect(lambda: octopiclient.jog(x=self.step, speed=1000))
         self.moveZPButton.pressed.connect(lambda: octopiclient.jog(z=self.step, speed=1000))
         self.moveZMButton.pressed.connect(lambda: octopiclient.jog(z=-self.step, speed=1000))
         self.extruderButton.pressed.connect(lambda: octopiclient.extrude(self.step))
